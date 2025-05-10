@@ -29,8 +29,13 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-portfolio-bg/80 backdrop-blur-md">
       <div className="container mx-auto px-6 py-5 flex justify-between items-center">
-        <Link to="/" className="font-serif text-2xl tracking-tight">
-          <span className="text-portfolio-accent">P</span>ortfolio
+        <Link to="/" className="font-serif text-2xl tracking-tight flex items-center">
+          <img 
+            src="/lovable-uploads/08661f08-9e2e-4316-8b0f-e593eee47af0.png" 
+            alt="Kasey Logo" 
+            className="h-8 w-auto mr-2" 
+          />
+          <span className="text-portfolio-accent">K</span>asey
         </Link>
         <nav className="hidden md:flex items-center space-x-2">
           <NavItem to="/" active={location === '/'}>Home</NavItem>

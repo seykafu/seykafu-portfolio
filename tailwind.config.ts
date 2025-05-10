@@ -67,12 +67,12 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))'
         },
-        // Portfolio custom colors
+        // Portfolio custom colors - updated to beige and pink
         'portfolio': {
           'bg': '#0F0F12',
           'text': '#E6E6E9',
-          'accent': '#7C65C3',
-          'accent-light': '#9B87D9',
+          'accent': '#E5B1A5', // Pink
+          'accent-light': '#F3D9D2', // Light Pink
           'muted': '#2D2D34'
         }
       },

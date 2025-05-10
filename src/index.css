@@ -17,7 +17,7 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 252 45% 58%;
+    --primary: 12 45% 77%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 240 3.7% 15.9%;
@@ -26,7 +26,7 @@
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
 
-    --accent: 252 45% 58%;
+    --accent: 12 45% 77%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -34,7 +34,7 @@
 
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 252 45% 58%;
+    --ring: 12 45% 77%;
 
     --radius: 0.5rem;
   }
@@ -70,7 +70,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #9B87D9;
+  background-color: #E5B1A5; /* Updated to pink */
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
@@ -124,7 +124,7 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: rgba(124, 101, 195, 0.2);
+  background-color: rgba(229, 177, 165, 0.2);
 }
 
 .timeline-line {
