@@ -1,7 +1,6 @@
 
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
-import Timeline from '../components/Timeline';
 
 const Index = () => {
   useEffect(() => {
@@ -54,12 +53,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </section>
-
-        {/* Timeline Section */}
-        <section className="py-16">
-          <h2 className="text-center font-serif text-3xl font-semibold mb-8">My Journey</h2>
-          <Timeline />
         </section>
       </div>
     </Layout>

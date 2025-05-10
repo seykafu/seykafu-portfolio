@@ -2,6 +2,7 @@
 import React from 'react';
 import CustomCursor from './CustomCursor';
 import Navbar from './Navbar';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -21,9 +22,18 @@ const Layout = ({ children }: LayoutProps) => {
             <p className="text-sm">© {new Date().getFullYear()} Kasey. All rights reserved.</p>
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="text-portfolio-text/60 hover:text-portfolio-accent transition-colors">LinkedIn</a>
-            <a href="#" className="text-portfolio-text/60 hover:text-portfolio-accent transition-colors">Twitter</a>
-            <a href="#" className="text-portfolio-text/60 hover:text-portfolio-accent transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/kaseyfu/" target="_blank" rel="noopener noreferrer" className="text-portfolio-text/60 hover:text-portfolio-accent transition-colors flex items-center gap-1">
+              <Linkedin className="w-4 h-4" />
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/seykafu" target="_blank" rel="noopener noreferrer" className="text-portfolio-text/60 hover:text-portfolio-accent transition-colors flex items-center gap-1">
+              <Github className="w-4 h-4" />
+              <span>GitHub</span>
+            </a>
+            <a href="https://x.com/seykafu" target="_blank" rel="noopener noreferrer" className="text-portfolio-text/60 hover:text-portfolio-accent transition-colors flex items-center gap-1">
+              <Twitter className="w-4 h-4" />
+              <span>Twitter</span>
+            </a>
           </div>
         </div>
       </footer>
