@@ -27,7 +27,7 @@ const TimelineItem = ({ year, title, active }: TimelineItemProps) => {
 
 const Timeline = () => {
   const milestones = [
-    { year: '2016', title: 'Beginning', active: true },
+    { year: '2016', title: 'Began at Waterloo', active: true },
     { year: '2017', title: 'Qidni Labs', active: true },
     { year: '2018', title: 'BlackBerry', active: true },
     { year: '2019', title: 'SAP', active: true },
@@ -40,7 +40,7 @@ const Timeline = () => {
   ];
 
   return (
-    <div className="w-full max-w-3xl mx-auto py-12">
+    <div className="w-full max-w-4xl mx-auto py-12">
       <div className="relative">
         <div className="timeline-line absolute top-[6px] left-0 w-full"></div>
         <div className="flex justify-between relative z-10">

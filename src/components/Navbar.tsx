@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-5 flex justify-between items-center">
         <Link to="/" className="font-serif text-2xl tracking-tight flex items-center">
           <img 
-            src="/lovable-uploads/08661f08-9e2e-4316-8b0f-e593eee47af0.png" 
+            src="/lovable-uploads/87a43d36-259d-4a98-99d7-98e3394aa0b1.png" 
             alt="Kasey Logo" 
             className="h-8 w-auto mr-2" 
           />

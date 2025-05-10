@@ -60,6 +60,9 @@
   .custom-cursor-none {
     cursor: none;
   }
+  .perspective-[1500px] {
+    perspective: 1500px;
+  }
 }
 
 /* Custom cursor styles */
