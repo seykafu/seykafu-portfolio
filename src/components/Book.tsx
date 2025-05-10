@@ -1,12 +1,13 @@
 
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 
 interface BookPage {
   title: string;
   year: string;
   description: string;
   coverImage?: string;
+  link?: string;
 }
 
 interface BookProps {
@@ -77,11 +78,22 @@ const Book = ({ pages }: BookProps) => {
                     </div>
                   )}
                   
-                  <p className="text-lg max-w-xl mx-auto text-portfolio-text/80">
+                  <p className="text-lg max-w-xl mx-auto text-portfolio-text/80 mb-6">
                     {pages[currentPage].description}
                   </p>
                   
-                  <div className="mt-10 text-sm text-portfolio-text/60">
+                  {pages[currentPage].link && (
+                    <a 
+                      href={pages[currentPage].link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-portfolio-accent hover:text-portfolio-accent-light transition-colors mb-6"
+                    >
+                      View Project <ExternalLink size={16} />
+                    </a>
+                  )}
+                  
+                  <div className="mt-4 text-sm text-portfolio-text/60">
                     Page {currentPage + 1} of {pages.length}
                   </div>
                 </div>

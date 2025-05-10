@@ -2,44 +2,62 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Book from '../components/Book';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BookOpen, FileText } from "lucide-react";
 
 const WritingPortfolio = () => {
-  const bookPages = [
+  const fictionPages = [
     {
       title: "Darkness Me, Colorful You",
       year: "2022",
       description: "A fascinating journey through the mind of a protagonist who sees the world in shades of gray until meeting someone who changes everything. This fiction novel explores themes of perception, mental health, and personal transformation.",
-      coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f"
+      coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+      link: "https://www.goodreads.com/book/show/63187906-darkness-me-colorful-you"
     },
     {
       title: "Corruptions in the Autumn!",
       year: "2023",
       description: "My second fiction book follows the story of a small town facing mysterious events as autumn arrives. A tale of community, secrets, and the supernatural that captivates readers from the first page to the last.",
-      coverImage: "https://images.unsplash.com/photo-1495640452828-3df6795cf69b"
+      coverImage: "https://images.unsplash.com/photo-1495640452828-3df6795cf69b",
+      link: "https://www.goodreads.com/book/show/63203705-corruptions-are-best-exposed-in-the-autumn"
     },
     {
       title: "The Impeccable Coin",
       year: "2023",
       description: "A short story about a magical coin that grants wishes, but at unexpected costs. This narrative explores the consequences of desire and the true meaning of value in our lives.",
-      coverImage: "https://images.unsplash.com/photo-1633158829799-96bb13cab779"
+      coverImage: "https://images.unsplash.com/photo-1633158829799-96bb13cab779",
+      link: "https://docs.google.com/document/d/1BNMSx5bfZK2nN9ebcU_YtjG5kORIeH-nhctxYPLfm90/edit?usp=sharing"
     },
     {
       title: "Green to Greed",
       year: "2023",
       description: "This short story follows the transformation of a naive environmentalist who enters the corporate world to make change from within, only to find themselves slowly corrupted by the system they sought to reform.",
-      coverImage: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e"
+      coverImage: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e",
+      link: "https://docs.google.com/document/d/1cwIo1jCKAuo-vtQTfikDHMCMELzgsTHAoQuMcwZhQF8/edit?usp=sharing"
     },
-    {
-      title: "My Medium Blogs",
-      year: "2020-Present",
-      description: "A collection of articles covering technology trends, product management insights, creative writing tips, and personal reflections published on Medium and other platforms.",
-      coverImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643"
-    },
+  ];
+
+  const nonFictionPages = [
     {
       title: "Dare to Dream",
       year: "2025 (Upcoming)",
       description: "My upcoming non-fiction book explores the power of vision and perseverance, featuring interviews with innovators who turned their dreams into reality. Set to be released in December 2025.",
-      coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475"
+      coverImage: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+      link: "https://medium.com/dream-house/dealing-with-career-anxiety-announcing-my-upcoming-book-dare-to-dream-b50bd5227d02"
+    },
+    {
+      title: "My Substack Newsletter",
+      year: "2020-Present",
+      description: "PM Hive - A collection of articles covering product management, tech, productivity, and career advice published regularly on Substack.",
+      coverImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643",
+      link: "https://seykafu.substack.com/"
+    },
+    {
+      title: "PM Hive Newsletter",
+      year: "2020-Present",
+      description: "A curated newsletter for product managers featuring industry insights, best practices, and upcoming PM Hive community events.",
+      coverImage: "https://images.unsplash.com/photo-1512314889357-e157c22f938d",
+      link: "https://lu.ma/PMHive"
     },
   ];
 
@@ -48,12 +66,42 @@ const WritingPortfolio = () => {
       <div className="container mx-auto px-4 md:px-6">
         <section className="py-16">
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-center">Writing Portfolio</h1>
-          <p className="text-lg text-portfolio-text/80 max-w-3xl mx-auto mb-16 text-center">
+          <p className="text-lg text-portfolio-text/80 max-w-3xl mx-auto mb-12 text-center">
             Explore my literary works spanning fiction, short stories, and non-fiction articles.
-            Each page represents a different published work or collection.
           </p>
           
-          <Book pages={bookPages} />
+          <Tabs defaultValue="fiction" className="w-full max-w-4xl mx-auto">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
+              <TabsTrigger value="fiction" className="flex items-center gap-2">
+                <BookOpen className="h-4 w-4" />
+                <span>Fiction</span>
+              </TabsTrigger>
+              <TabsTrigger value="non-fiction" className="flex items-center gap-2">
+                <FileText className="h-4 w-4" />
+                <span>Non-Fiction</span>
+              </TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="fiction" className="focus-visible:outline-none mt-2">
+              <div className="mb-4 text-center">
+                <h2 className="text-3xl font-serif mb-4">Fiction Projects</h2>
+                <p className="text-portfolio-text/80 max-w-2xl mx-auto">
+                  From novels to short stories, explore my creative fictional works.
+                </p>
+              </div>
+              <Book pages={fictionPages} />
+            </TabsContent>
+            
+            <TabsContent value="non-fiction" className="focus-visible:outline-none mt-2">
+              <div className="mb-4 text-center">
+                <h2 className="text-3xl font-serif mb-4">Non-Fiction Projects</h2>
+                <p className="text-portfolio-text/80 max-w-2xl mx-auto">
+                  Articles, newsletters, and resources on product management, tech, and career growth.
+                </p>
+              </div>
+              <Book pages={nonFictionPages} />
+            </TabsContent>
+          </Tabs>
         </section>
       </div>
     </Layout>

@@ -1,7 +1,8 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
+import { Menu, X } from 'lucide-react';
 
 interface NavItemProps {
   to: string;
@@ -25,6 +26,7 @@ const NavItem = ({ to, active, children }: NavItemProps) => {
 
 const Navbar = () => {
   const location = window.location.pathname;
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-portfolio-bg/80 backdrop-blur-md">
@@ -43,12 +45,30 @@ const Navbar = () => {
           <NavItem to="/writing-portfolio" active={location === '/writing-portfolio'}>Writing Portfolio</NavItem>
           <NavItem to="/about" active={location === '/about'}>About Me</NavItem>
         </nav>
-        <button className="md:hidden text-portfolio-text">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-          </svg>
+        <button 
+          className="md:hidden text-portfolio-text"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {mobileMenuOpen ? (
+            <X className="w-6 h-6" />
+          ) : (
+            <Menu className="w-6 h-6" />
+          )}
         </button>
       </div>
+      
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-portfolio-bg/95 backdrop-blur-md">
+          <nav className="flex flex-col items-center py-4">
+            <NavItem to="/" active={location === '/'}>Home</NavItem>
+            <NavItem to="/product-portfolio" active={location === '/product-portfolio'}>Product Portfolio</NavItem>
+            <NavItem to="/writing-portfolio" active={location === '/writing-portfolio'}>Writing Portfolio</NavItem>
+            <NavItem to="/about" active={location === '/about'}>About Me</NavItem>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };
