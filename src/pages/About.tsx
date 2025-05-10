@@ -82,62 +82,64 @@ const About = () => {
           </div>
         </section>
         
-        {/* Podcasts Section */}
+        {/* Podcasts Section - Updated */}
         <section className="py-16">
           <div className="flex items-center mb-8">
             <FileText className="text-portfolio-accent mr-3" />
             <h2 className="font-serif text-3xl font-semibold">My Podcasts</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-portfolio-muted/30 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">Tech Product Insights</h3>
+              <h3 className="text-xl font-bold mb-2">The PM Hive Podcast</h3>
               <p className="text-portfolio-text/80 mb-4">
-                A weekly discussion about product management trends and strategies in tech.
+                Discussions about product management trends and insights from the PM Hive community.
               </p>
               <a href="#" className="text-portfolio-accent hover:text-portfolio-accent-light">Listen →</a>
             </div>
             <div className="bg-portfolio-muted/30 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">Writer's Corner</h3>
+              <h3 className="text-xl font-bold mb-2">UW PM Club Podcast</h3>
               <p className="text-portfolio-text/80 mb-4">
-                Conversations with authors about their creative process and literary journeys.
+                Interviews and conversations with University of Waterloo product managers and industry experts.
               </p>
               <a href="#" className="text-portfolio-accent hover:text-portfolio-accent-light">Listen →</a>
             </div>
             <div className="bg-portfolio-muted/30 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-2">Future Forward</h3>
+              <h3 className="text-xl font-bold mb-2">Dare To Dream Podcast</h3>
               <p className="text-portfolio-text/80 mb-4">
-                Exploring emerging technologies and their potential impact on society.
+                Coming soon! Exploring career journeys and professional development strategies.
               </p>
-              <a href="#" className="text-portfolio-accent hover:text-portfolio-accent-light">Listen →</a>
+              <a href="#" className="text-portfolio-accent hover:text-portfolio-accent-light">Coming Soon →</a>
             </div>
           </div>
         </section>
         
-        {/* Bookshelf Section */}
+        {/* Bookshelf Section - Changed to bullet list */}
         <section className="py-16">
           <div className="flex items-center mb-8">
             <BookOpen className="text-portfolio-accent mr-3" />
             <h2 className="font-serif text-3xl font-semibold">My Bookshelf</h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            <div className="aspect-[2/3] bg-portfolio-muted/30 rounded-md flex items-center justify-center p-4 text-center">
-              <span>Atomic Habits</span>
-            </div>
-            <div className="aspect-[2/3] bg-portfolio-muted/30 rounded-md flex items-center justify-center p-4 text-center">
-              <span>Zero to One</span>
-            </div>
-            <div className="aspect-[2/3] bg-portfolio-muted/30 rounded-md flex items-center justify-center p-4 text-center">
-              <span>Inspired</span>
-            </div>
-            <div className="aspect-[2/3] bg-portfolio-muted/30 rounded-md flex items-center justify-center p-4 text-center">
-              <span>Sapiens</span>
-            </div>
-            <div className="aspect-[2/3] bg-portfolio-muted/30 rounded-md flex items-center justify-center p-4 text-center">
-              <span>On Writing</span>
-            </div>
-            <div className="aspect-[2/3] bg-portfolio-muted/30 rounded-md flex items-center justify-center p-4 text-center">
-              <span>Shoe Dog</span>
-            </div>
+          <div className="bg-portfolio-muted/30 p-6 rounded-lg">
+            <ul className="space-y-4 list-disc pl-5">
+              <li>
+                <span className="font-bold">Atomic Habits</span> - A comprehensive guide on building good habits and breaking bad ones through small, consistent changes.
+              </li>
+              <li>
+                <span className="font-bold">Zero to One</span> - Peter Thiel's insights on building startups and creating new things rather than iterating on existing ideas.
+              </li>
+              <li>
+                <span className="font-bold">Inspired</span> - Marty Cagan's product management bible covering techniques for creating tech products customers love.
+              </li>
+              <li>
+                <span className="font-bold">Sapiens</span> - A brief history of humankind exploring how humans evolved and built complex societies and civilizations.
+              </li>
+              <li>
+                <span className="font-bold">On Writing</span> - Stephen King's memoir and guide offering practical advice and insights into the craft of writing.
+              </li>
+              <li>
+                <span className="font-bold">Shoe Dog</span> - Phil Knight's memoir about founding Nike and the challenges of building a global brand.
+              </li>
+            </ul>
           </div>
         </section>
         
@@ -218,51 +220,30 @@ const About = () => {
           </div>
         </section>
         
-        {/* Hobbies Section */}
+        {/* Hobbies Section - Removed images, simplified to text */}
         <section className="py-16">
           <div className="flex items-center mb-8">
             <Clock className="text-portfolio-accent mr-3" />
             <h2 className="font-serif text-3xl font-semibold">My Hobbies</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-portfolio-muted/30 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1501854140801-50d01698950b" 
-                alt="Hiking" 
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">Hiking</h3>
-                <p className="text-portfolio-text/80">
-                  Exploring nature trails and mountains whenever possible.
-                </p>
-              </div>
+            <div className="bg-portfolio-muted/30 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">Hiking</h3>
+              <p className="text-portfolio-text/80">
+                Exploring nature trails and mountains whenever possible, seeking adventure and fresh perspectives.
+              </p>
             </div>
-            <div className="bg-portfolio-muted/30 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb" 
-                alt="Photography" 
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">Photography</h3>
-                <p className="text-portfolio-text/80">
-                  Capturing moments and unique perspectives through the lens.
-                </p>
-              </div>
+            <div className="bg-portfolio-muted/30 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">Photography</h3>
+              <p className="text-portfolio-text/80">
+                Capturing moments and unique perspectives through the lens, focusing on landscapes and street photography.
+              </p>
             </div>
-            <div className="bg-portfolio-muted/30 rounded-lg overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1500673922987-e212871fec22" 
-                alt="Reading" 
-                className="w-full h-40 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-bold mb-2">Reading</h3>
-                <p className="text-portfolio-text/80">
-                  Constantly expanding horizons through books of various genres.
-                </p>
-              </div>
+            <div className="bg-portfolio-muted/30 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-2">Reading</h3>
+              <p className="text-portfolio-text/80">
+                Constantly expanding horizons through books of various genres, from business and technology to fiction and philosophy.
+              </p>
             </div>
           </div>
         </section>
