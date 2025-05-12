@@ -43,6 +43,7 @@ const Navbar = () => {
           <NavItem to="/" active={location === '/'}>Home</NavItem>
           <NavItem to="/product-portfolio" active={location === '/product-portfolio'}>Product Portfolio</NavItem>
           <NavItem to="/writing-portfolio" active={location === '/writing-portfolio'}>Writing Portfolio</NavItem>
+          <NavItem to="/community-work" active={location === '/community-work'}>Community Work</NavItem>
           <NavItem to="/about" active={location === '/about'}>About Me</NavItem>
         </nav>
         <button 
@@ -65,6 +66,7 @@ const Navbar = () => {
             <NavItem to="/" active={location === '/'}>Home</NavItem>
             <NavItem to="/product-portfolio" active={location === '/product-portfolio'}>Product Portfolio</NavItem>
             <NavItem to="/writing-portfolio" active={location === '/writing-portfolio'}>Writing Portfolio</NavItem>
+            <NavItem to="/community-work" active={location === '/community-work'}>Community Work</NavItem>
             <NavItem to="/about" active={location === '/about'}>About Me</NavItem>
           </nav>
         </div>

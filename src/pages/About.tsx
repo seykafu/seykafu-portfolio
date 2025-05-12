@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '../components/Layout';
 import { Briefcase, BookOpen, FileText, User, Calendar, Clock } from 'lucide-react';
@@ -19,8 +18,9 @@ const About = () => {
               <p className="text-lg text-portfolio-text/80">
                 With a background spanning from startups to large enterprises like Microsoft and Planview, 
                 I've developed a versatile skill set that allows me to tackle complex problems and deliver 
-                exceptional results. When I'm not working on products, I'm usually writing fiction or exploring 
-                new ideas through my blog posts.
+                exceptional results. As the co-lead for both PM Hive and Vancouver Tech Week, I'm deeply involved 
+                in growing Vancouver's tech community. When I'm not working on products or community initiatives, 
+                I'm usually writing fiction or exploring new ideas through my blog posts.
               </p>
             </div>
             <div className="relative">
@@ -82,7 +82,7 @@ const About = () => {
           </div>
         </section>
         
-        {/* Podcasts Section - Updated */}
+        {/* Podcasts Section */}
         <section className="py-16">
           <div className="flex items-center mb-8">
             <FileText className="text-portfolio-accent mr-3" />
@@ -113,7 +113,7 @@ const About = () => {
           </div>
         </section>
         
-        {/* Bookshelf Section - Changed to bullet list */}
+        {/* Bookshelf Section */}
         <section className="py-16">
           <div className="flex items-center mb-8">
             <BookOpen className="text-portfolio-accent mr-3" />
@@ -220,7 +220,7 @@ const About = () => {
           </div>
         </section>
         
-        {/* Hobbies Section - Removed images, simplified to text */}
+        {/* Hobbies Section */}
         <section className="py-16">
           <div className="flex items-center mb-8">
             <Clock className="text-portfolio-accent mr-3" />
