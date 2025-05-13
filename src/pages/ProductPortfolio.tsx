@@ -38,12 +38,6 @@ const ProductPortfolio = () => {
       image: "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d"
     },
     {
-      company: "Avoy",
-      year: "2020",
-      description: "Built travel technology solutions for modern travelers.",
-      image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
-    },
-    {
       company: "CertiK",
       year: "2020",
       description: "Worked on blockchain security solutions and audit tools.",
@@ -62,10 +56,10 @@ const ProductPortfolio = () => {
       image: "https://images.unsplash.com/photo-1599658880436-c61792e70672"
     },
     {
-      company: "BlackBerry",
+      company: "BlackBerry Messenger",
       year: "2018",
       description: "Led product initiatives for enterprise security software solutions.",
-      image: "https://images.unsplash.com/photo-1611174475383-7665406065b3"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f"
     },
     {
       company: "Qidni Labs",
