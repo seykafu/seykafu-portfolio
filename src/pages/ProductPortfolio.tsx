@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 
@@ -6,6 +7,7 @@ interface ProductItem {
   year: string;
   description: string;
   image: string;
+  video?: string;
 }
 
 const ProductPortfolio = () => {
@@ -13,20 +15,21 @@ const ProductPortfolio = () => {
     {
       company: "Planview",
       year: "2023-2025",
-      description: "Managing portfolio management solutions for enterprises.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+      description: "The Lead PM for Planview's AI Assistant, Planview Copilot, growing the product from 0 to 1. Grew adoption from 0 to 110 customers and 0 to 1200 prompts per month.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      video: '<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7326020067362492417?compact=1" height="399" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>'
     },
     {
       company: "Microsoft",
       year: "2021-2023",
-      description: "Led product management for cloud services and enterprise solutions.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+      description: "Product manager in Bing's Web Data Platform team, shipping ML models to improve Bing search results and captions.",
+      image: "/lovable-uploads/cbcb4d24-3b85-4d2a-b9a5-20f86cda7c7b.png"
     },
     {
       company: "Unity",
       year: "2021",
       description: "Worked on Unity Cloud Content Delivery as a product manager.",
-      image: "https://images.unsplash.com/photo-1614294149010-950b698f72c0"
+      image: "/lovable-uploads/2fbc7641-38fc-4781-99cc-14824eaef1be.png"
     },
     {
       company: "Shenkii",
@@ -44,13 +47,13 @@ const ProductPortfolio = () => {
       company: "CertiK",
       year: "2020",
       description: "Worked on blockchain security solutions and audit tools.",
-      image: "https://images.unsplash.com/photo-1639322537504-6427a16b0a28"
+      image: "/lovable-uploads/03c05719-feca-4156-bfb5-7a7d53903d0d.png"
     },
     {
       company: "Veeva Systems",
       year: "2020",
       description: "Developed cloud-based software for life sciences industry.",
-      image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7"
+      image: "/lovable-uploads/6d4375c7-cb88-451c-ad60-6b8856ff87cb.png"
     },
     {
       company: "SAP",
@@ -103,12 +106,18 @@ const ProductPortfolio = () => {
               <div key={index} className="product-item grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className={`${index % 2 === 0 ? 'order-1' : 'order-1 md:order-2'}`}>
                   <div className="relative group">
-                    <div className="absolute inset-0 bg-portfolio-accent/20 group-hover:bg-portfolio-accent/10 transition-colors rounded-lg"></div>
-                    <img 
-                      src={product.image} 
-                      alt={product.company} 
-                      className="w-full h-48 md:h-60 object-cover rounded-lg"
-                    />
+                    {product.video ? (
+                      <div className="w-full" dangerouslySetInnerHTML={{ __html: product.video }} />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-portfolio-accent/20 group-hover:bg-portfolio-accent/10 transition-colors rounded-lg"></div>
+                        <img 
+                          src={product.image} 
+                          alt={product.company} 
+                          className="w-full h-48 md:h-60 object-cover rounded-lg"
+                        />
+                      </>
+                    )}
                   </div>
                 </div>
                 <div className={`${index % 2 === 0 ? 'order-2' : 'order-2 md:order-1'}`}>
