@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 
@@ -24,16 +23,16 @@ const ProductPortfolio = () => {
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
     },
     {
-      company: "Shenkii",
-      year: "2021",
-      description: "Developed virtual reality experiences and educational tools.",
-      image: "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d"
-    },
-    {
       company: "Unity",
       year: "2021",
-      description: "Contributed to game development platform and tools.",
+      description: "Worked on Unity Cloud Content Delivery as a product manager.",
       image: "https://images.unsplash.com/photo-1614294149010-950b698f72c0"
+    },
+    {
+      company: "Shenkii",
+      year: "2021",
+      description: "Product manager for a Japanese NFT marketplace platform.",
+      image: "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d"
     },
     {
       company: "Avoy",

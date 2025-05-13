@@ -37,8 +37,8 @@ const CareerSection = () => {
           <div>
             <h3 className="text-xl font-bold">Unity & Shenkii</h3>
             <p className="text-lg text-portfolio-text/80 mt-2">
-              Contributed to gaming and VR educational platforms, enhancing user experiences 
-              and expanding product capabilities.
+              Worked on Unity Cloud Content Delivery as a PM and contributed to Shenkii, 
+              a Japanese NFT marketplace platform.
             </p>
           </div>
         </div>

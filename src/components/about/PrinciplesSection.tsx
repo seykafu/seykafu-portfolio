@@ -11,39 +11,39 @@ const PrinciplesSection = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-3">User-Centric Design</h3>
+          <h3 className="text-xl font-bold mb-3">Always a Growth Mindset</h3>
           <p className="text-portfolio-text/80">
-            Always put the user's needs and experiences at the center of product decisions.
+            Embrace challenges as opportunities to learn, develop, and continuously improve.
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-3">Continuous Learning</h3>
+          <h3 className="text-xl font-bold mb-3">Show Compassion</h3>
           <p className="text-portfolio-text/80">
-            Embrace opportunities to grow and develop new skills throughout life.
+            Practice empathy and kindness in all interactions, recognizing everyone's unique journey.
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-3">Ethical Innovation</h3>
+          <h3 className="text-xl font-bold mb-3">Be Creative</h3>
           <p className="text-portfolio-text/80">
-            Create technology that respects privacy and promotes positive social impact.
+            Approach problems with imagination and innovative thinking to discover unique solutions.
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-3">Clear Communication</h3>
+          <h3 className="text-xl font-bold mb-3">Block Out the Noise</h3>
           <p className="text-portfolio-text/80">
-            Prioritize transparency and effective communication in all interactions.
+            Focus on what truly matters by filtering out distractions and staying committed to priorities.
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-3">Creative Thinking</h3>
+          <h3 className="text-xl font-bold mb-3">Chaos Over Laziness</h3>
           <p className="text-portfolio-text/80">
-            Approach problems with creativity and look beyond conventional solutions.
+            Embrace productive disorder and experimentation rather than settling for comfort and inaction.
           </p>
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-3">Balance</h3>
+          <h3 className="text-xl font-bold mb-3">Be Community Centric</h3>
           <p className="text-portfolio-text/80">
-            Maintain equilibrium between professional pursuits and personal well-being.
+            Prioritize collective growth and support networks that foster mutual success and advancement.
           </p>
         </div>
       </div>

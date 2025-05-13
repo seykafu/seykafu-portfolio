@@ -12,22 +12,22 @@ const BookshelfSection = () => {
       <div className="bg-portfolio-muted/30 p-6 rounded-lg">
         <ul className="space-y-4 list-disc pl-5">
           <li>
-            <span className="font-bold">Atomic Habits</span> - A comprehensive guide on building good habits and breaking bad ones through small, consistent changes.
+            <span className="font-bold">So Good They Can't Ignore You</span> - Cal Newport's guide on developing rare and valuable skills to create work you love rather than following passion.
           </li>
           <li>
-            <span className="font-bold">Zero to One</span> - Peter Thiel's insights on building startups and creating new things rather than iterating on existing ideas.
+            <span className="font-bold">Deep Work</span> - Cal Newport's approach to focused, distraction-free work that improves productivity and results.
           </li>
           <li>
-            <span className="font-bold">Inspired</span> - Marty Cagan's product management bible covering techniques for creating tech products customers love.
+            <span className="font-bold">Supercommunicators</span> - Charles Duhigg's insights on mastering the art of human connection in a digital world.
           </li>
           <li>
-            <span className="font-bold">Sapiens</span> - A brief history of humankind exploring how humans evolved and built complex societies and civilizations.
+            <span className="font-bold">Ikigai</span> - Héctor García and Francesc Miralles explore the Japanese concept of finding purpose and joy in daily life.
           </li>
           <li>
-            <span className="font-bold">On Writing</span> - Stephen King's memoir and guide offering practical advice and insights into the craft of writing.
+            <span className="font-bold">Adult Children of Emotionally Immature Parents</span> - Lindsay Gibson's guide to healing from childhood and improving emotional connections.
           </li>
           <li>
-            <span className="font-bold">Shoe Dog</span> - Phil Knight's memoir about founding Nike and the challenges of building a global brand.
+            <span className="font-bold">The Psychology of Money</span> - Morgan Housel's timeless lessons on wealth, greed, and happiness through interesting stories.
           </li>
         </ul>
       </div>
