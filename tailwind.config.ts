@@ -102,6 +102,14 @@ export default {
           from: { opacity: '0', transform: 'translateY(10px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
         },
+        'page-flip-right': {
+          '0%': { transform: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(-15deg)' },
+        },
+        'page-flip-left': {
+          '0%': { transform: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(15deg)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -109,6 +117,8 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'page-turn': 'page-turn 0.5s ease-in-out forwards',
         'fade-in': 'fade-in 0.3s ease-out',
+        'page-flip-right': 'page-flip-right 0.5s ease-in-out forwards',
+        'page-flip-left': 'page-flip-left 0.5s ease-in-out forwards',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

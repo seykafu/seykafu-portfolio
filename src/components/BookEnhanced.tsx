@@ -19,14 +19,32 @@ interface BookProps {
 
 const BookEnhanced = ({ pages }: BookProps) => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [isFlipping, setIsFlipping] = useState(false);
+  const [direction, setDirection] = useState<'next' | 'prev'>('next');
   const totalPages = pages.length;
 
   const goToPrevPage = () => {
-    setCurrentPage((prev) => (prev > 0 ? prev - 1 : prev));
+    if (currentPage > 0 && !isFlipping) {
+      setDirection('prev');
+      setIsFlipping(true);
+      
+      setTimeout(() => {
+        setCurrentPage((prev) => prev - 1);
+        setIsFlipping(false);
+      }, 500); // Match this with the CSS animation duration
+    }
   };
 
   const goToNextPage = () => {
-    setCurrentPage((prev) => (prev < totalPages - 1 ? prev + 1 : prev));
+    if (currentPage < totalPages - 1 && !isFlipping) {
+      setDirection('next');
+      setIsFlipping(true);
+      
+      setTimeout(() => {
+        setCurrentPage((prev) => prev + 1);
+        setIsFlipping(false);
+      }, 500); // Match this with the CSS animation duration
+    }
   };
 
   const page = pages[currentPage];
@@ -35,7 +53,7 @@ const BookEnhanced = ({ pages }: BookProps) => {
     <div className="w-full max-w-4xl mx-auto perspective-[1500px]">
       <div className="book relative">
         {/* Book with spine and shadow effect */}
-        <Card className="bg-[#f3f3f3] border border-gray-300 rounded-sm overflow-hidden shadow-[5px_5px_15px_rgba(0,0,0,0.2)] transform-gpu">
+        <Card className={`bg-[#f3f3f3] border border-gray-300 rounded-sm overflow-hidden shadow-[5px_5px_15px_rgba(0,0,0,0.2)] transform-gpu ${isFlipping ? direction === 'next' ? 'animate-page-flip-right' : 'animate-page-flip-left' : ''}`}>
           {/* Book spine */}
           <div className="absolute left-0 top-0 bottom-0 w-[12px] bg-gradient-to-r from-[#d2d0c6] to-[#f3f3f3] rounded-l-sm"></div>
           
@@ -76,7 +94,7 @@ const BookEnhanced = ({ pages }: BookProps) => {
         <div className="flex justify-between items-center mt-8">
           <button 
             onClick={goToPrevPage} 
-            disabled={currentPage === 0}
+            disabled={currentPage === 0 || isFlipping}
             className="p-2 bg-portfolio-muted rounded-full hover:bg-portfolio-accent/20 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
           >
             <ArrowLeft size={24} />
@@ -86,7 +104,7 @@ const BookEnhanced = ({ pages }: BookProps) => {
           </div>
           <button 
             onClick={goToNextPage} 
-            disabled={currentPage === totalPages - 1}
+            disabled={currentPage === totalPages - 1 || isFlipping}
             className="p-2 bg-portfolio-muted rounded-full hover:bg-portfolio-accent/20 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
           >
             <ArrowRight size={24} />
