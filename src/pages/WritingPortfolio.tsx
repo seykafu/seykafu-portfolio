@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '../components/Layout';
 import Book from '../components/Book';
@@ -10,15 +9,15 @@ const WritingPortfolio = () => {
     {
       title: "Darkness Me, Colorful You",
       year: "2022",
-      description: "A fascinating journey through the mind of a protagonist who sees the world in shades of gray until meeting someone who changes everything. This fiction novel explores themes of perception, mental health, and personal transformation.",
-      coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f",
+      description: "Dive into a world of Perpetua to help Koka uncover the truths of his country and his past, all while fighting to earn the love of a certain goddess along the way! If you're seeking the ultimate escapism novel, J.X. Fu's Darkness Me, Colorful You, Vol. 1 delivers a breathtaking adventure full of mystery, magic, action, and romance.",
+      coverImage: "/lovable-uploads/7426fbbf-26cb-4290-876d-66226e408b83.png",
       link: "https://www.goodreads.com/book/show/63187906-darkness-me-colorful-you"
     },
     {
       title: "Corruptions in the Autumn!",
       year: "2023",
-      description: "My second fiction book follows the story of a small town facing mysterious events as autumn arrives. A tale of community, secrets, and the supernatural that captivates readers from the first page to the last.",
-      coverImage: "https://images.unsplash.com/photo-1495640452828-3df6795cf69b",
+      description: "Watch a poor man and a superstar woman clash in this Rom-Com! Life couldn't have crashed harder for the formerly rich Kai Darak, who lost everything thanks to his father's corruption while gaining a 30 million dollar debt. How does one sally forth while conveying his love to the girl who's life was ruined by their said father?",
+      coverImage: "/lovable-uploads/da2635f2-64bb-432a-90af-5eec7cd24d40.png",
       link: "https://www.goodreads.com/book/show/63203705-corruptions-are-best-exposed-in-the-autumn"
     },
     {
