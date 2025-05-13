@@ -13,19 +13,19 @@ const HobbiesSection = () => {
         <div className="bg-portfolio-muted/30 p-6 rounded-lg">
           <h3 className="text-xl font-bold mb-2">Writing</h3>
           <p className="text-portfolio-text/80">
-            Beyond my professional writing, I enjoy creative writing as a form of self-expression and storytelling, crafting both fiction and non-fiction pieces.
+            I write both fiction and non-fiction! Check out my Writing Portfolio :)
           </p>
         </div>
         <div className="bg-portfolio-muted/30 p-6 rounded-lg">
           <h3 className="text-xl font-bold mb-2">Traveling</h3>
           <p className="text-portfolio-text/80">
-            Exploring new cultures, cuisines, and landscapes around the world, collecting experiences and perspectives that enrich both my personal and professional life.
+            I love both solo traveling and visiting cultural places with friends. Went to India in 2025!
           </p>
         </div>
         <div className="bg-portfolio-muted/30 p-6 rounded-lg">
           <h3 className="text-xl font-bold mb-2">Cooking/Baking</h3>
           <p className="text-portfolio-text/80">
-            Experimenting with recipes and techniques in the kitchen, finding joy in creating delicious meals and treats to share with friends and family.
+            I love making banana bread and olive oil cake the most :3
           </p>
         </div>
       </div>

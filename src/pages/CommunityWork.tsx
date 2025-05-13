@@ -10,11 +10,21 @@ const CommunityWork = () => {
       <div className="container mx-auto px-4 md:px-6">
         {/* Hero Section */}
         <section className="py-16">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Community Work</h1>
-            <p className="text-lg text-portfolio-text/80 mb-8">
-              As a passionate community builder, I co-founded PM Hive - Vancouver's premier Product Management community - back in 2023. I'm also a co-organizer of Vancouver Tech Week, bringing together tech professionals from across the region to connect, learn, and grow together.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Community Work</h1>
+              <p className="text-lg text-portfolio-text/80 mb-8">
+                As a passionate community builder, I co-founded PM Hive - Vancouver's premier Product Management community - back in 2023. I'm also a co-organizer of Vancouver Tech Week, bringing together tech professionals from across the region to connect, learn, and grow together.
+              </p>
+            </div>
+            <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-tr from-portfolio-accent/30 to-transparent z-10"></div>
+              <img 
+                src="/lovable-uploads/624b65ba-382e-4e59-925d-5bb1d80e1d20.png" 
+                alt="PM Hive Community Event" 
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </section>
         

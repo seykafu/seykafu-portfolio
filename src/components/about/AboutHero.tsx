@@ -14,7 +14,7 @@ const AboutHero = () => {
             <div>
               <h2 className="text-xl font-bold mb-2">My main focus</h2>
               <p className="text-lg text-portfolio-text/80">
-                During the day, I'm a PM in the AI space. I was previously at Microsoft Bing, shipping AI models and features in their backend platform. Now I'm at Planview, shipping a new AI assistant for its broad range of F500 customers. On the side, I write articles for various publications such as Product Coalition, Bootcamp, and SUPERJUMP. I'm also a published fiction author and currently working on a non-fiction book. I'm interested in industries such as gaming, enterprise, and content creation.
+                I identify as both a product leader and a writer. I helped improve <a href="https://bing.com" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Bing Search</a> marketshare back at Microsoft and now I'm building Planview's flagship AI product, <a href="https://planview.com/ai" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Planview Copilot</a>. I run both the <a href="https://pmhive.blog" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">PM Hive Newsletter</a> as well as other productivity blogs on <a href="https://medium.com/@seykafu" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Medium</a>.
               </p>
             </div>
             <div>
@@ -29,9 +29,6 @@ const AboutHero = () => {
                 Before diving into writing and PM work, I graduated with a Bachelor's of Science in Science and Business from the University of Waterloo. I've completed many internships in product before graduating.
               </p>
             </div>
-            <p className="text-lg text-portfolio-text/80">
-              Here, you'll find more about me, my Medium blog, my books, and my manga review blog!
-            </p>
           </div>
         </div>
         <div className="relative">
