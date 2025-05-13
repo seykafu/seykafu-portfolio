@@ -11,9 +11,8 @@ const WritingPortfolio = () => {
       title: "Darkness Me, Colorful You",
       year: "2022",
       description: "Dive into a world of Perpetua to help Koka uncover the truths of his country and his past, all while fighting to earn the love of a certain goddess along the way! If you're seeking the ultimate escapism novel, J.X. Fu's Darkness Me, Colorful You, Vol. 1 delivers a breathtaking adventure full of mystery, magic, action, and romance.",
-      coverImage: "/lovable-uploads/7426fbbf-26cb-4290-876d-66226e408b83.png",
-      link: "https://www.goodreads.com/book/show/63187906-darkness-me-colorful-you",
-      featured: true
+      coverImage: "/lovable-uploads/7426fbbf-26cb-4290-876d-66226e408b83.png", // This will be overridden in the component
+      link: "https://www.goodreads.com/book/show/63187906-darkness-me-colorful-you"
     },
     {
       title: "Corruptions in the Autumn!",
@@ -84,7 +83,7 @@ const WritingPortfolio = () => {
             </TabsList>
             
             <TabsContent value="fiction" className="focus-visible:outline-none mt-2">
-              <div className="mb-4 text-center">
+              <div className="mb-8 text-center">
                 <h2 className="text-3xl font-serif mb-4">Fiction Projects</h2>
                 <p className="text-portfolio-text/80 max-w-2xl mx-auto">
                   From novels to short stories, explore my creative fictional works.
@@ -94,7 +93,7 @@ const WritingPortfolio = () => {
             </TabsContent>
             
             <TabsContent value="non-fiction" className="focus-visible:outline-none mt-2">
-              <div className="mb-4 text-center">
+              <div className="mb-8 text-center">
                 <h2 className="text-3xl font-serif mb-4">Non-Fiction Projects</h2>
                 <p className="text-portfolio-text/80 max-w-2xl mx-auto">
                   Articles, newsletters, and resources on product management, tech, and career growth.
