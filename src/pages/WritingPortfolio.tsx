@@ -1,6 +1,7 @@
+
 import React from 'react';
 import Layout from '../components/Layout';
-import Book from '../components/Book';
+import BookEnhanced from '../components/BookEnhanced';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BookOpen, FileText } from "lucide-react";
 
@@ -11,7 +12,8 @@ const WritingPortfolio = () => {
       year: "2022",
       description: "Dive into a world of Perpetua to help Koka uncover the truths of his country and his past, all while fighting to earn the love of a certain goddess along the way! If you're seeking the ultimate escapism novel, J.X. Fu's Darkness Me, Colorful You, Vol. 1 delivers a breathtaking adventure full of mystery, magic, action, and romance.",
       coverImage: "/lovable-uploads/7426fbbf-26cb-4290-876d-66226e408b83.png",
-      link: "https://www.goodreads.com/book/show/63187906-darkness-me-colorful-you"
+      link: "https://www.goodreads.com/book/show/63187906-darkness-me-colorful-you",
+      featured: true
     },
     {
       title: "Corruptions in the Autumn!",
@@ -88,7 +90,7 @@ const WritingPortfolio = () => {
                   From novels to short stories, explore my creative fictional works.
                 </p>
               </div>
-              <Book pages={fictionPages} />
+              <BookEnhanced pages={fictionPages} />
             </TabsContent>
             
             <TabsContent value="non-fiction" className="focus-visible:outline-none mt-2">
@@ -98,7 +100,7 @@ const WritingPortfolio = () => {
                   Articles, newsletters, and resources on product management, tech, and career growth.
                 </p>
               </div>
-              <Book pages={nonFictionPages} />
+              <BookEnhanced pages={nonFictionPages} />
             </TabsContent>
           </Tabs>
         </section>
