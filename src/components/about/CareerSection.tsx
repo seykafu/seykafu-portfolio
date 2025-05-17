@@ -35,10 +35,10 @@ const CareerSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
           <div className="font-medium text-portfolio-accent">2021</div>
           <div>
-            <h3 className="text-xl font-bold">Unity & Shenkii</h3>
+            <h3 className="text-xl font-bold">Various Internships</h3>
             <p className="text-lg text-portfolio-text/80 mt-2">
-              Worked on Unity Cloud Content Delivery as a PM and contributed to Shenkii, 
-              a Japanese NFT marketplace platform.
+              I interned at various companies including Unity, Veeva Systems, and SAP, 
+              gaining diverse experience across gaming, life sciences, and enterprise software industries.
             </p>
           </div>
         </div>
