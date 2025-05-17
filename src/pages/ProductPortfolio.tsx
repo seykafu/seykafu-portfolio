@@ -22,7 +22,7 @@ const ProductPortfolio = () => {
     {
       company: "Microsoft",
       year: "2021-2023",
-      description: "Product manager in Bing's Web Data Platform team, shipping ML models to improve Bing search results and captions.",
+      description: "Improved Bing clickshare rate by 4% from 2023 to 2024 as the product manager in Bing's Web Data Platform team, shipping ML models to improve Bing Search results and caption accuracy.",
       image: "/lovable-uploads/cbcb4d24-3b85-4d2a-b9a5-20f86cda7c7b.png"
     },
     {

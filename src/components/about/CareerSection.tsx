@@ -43,8 +43,8 @@ const CareerSection = () => {
           </div>
         </div>
         
-        <a href="/product-portfolio" className="inline-block text-portfolio-accent hover:text-portfolio-accent-light mt-4">
-          View full product portfolio →
+        <a href="https://seykafu.notion.site/Seykafu-a8fda5021a274d82af74341b9a4a9f2e" className="inline-block text-portfolio-accent hover:text-portfolio-accent-light mt-4" target="_blank" rel="noopener noreferrer">
+          View my side projects →
         </a>
       </div>
     </section>
