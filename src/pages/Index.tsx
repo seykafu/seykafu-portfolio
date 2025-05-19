@@ -1,6 +1,7 @@
 
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   useEffect(() => {
@@ -34,12 +35,12 @@ const Index = () => {
                 I'm a product manager, author, and community builder. I'm the co-founder of PM Hive, Vancouver's PM community. For fun, I workout, write blogs, longboard, paint, play guitar, read, host events, and play video games! I also have a small cat named Khione.
               </p>
               <div className="mt-8 flex space-x-4 animate-on-load">
-                <a href="/product-portfolio" className="px-6 py-3 bg-portfolio-accent text-white rounded hover:bg-portfolio-accent-light transition-colors">
+                <Link to="/product-portfolio" className="px-6 py-3 bg-portfolio-accent text-white rounded hover:bg-portfolio-accent-light transition-colors">
                   View Product Work
-                </a>
-                <a href="/writing-portfolio" className="px-6 py-3 border border-portfolio-accent text-portfolio-accent rounded hover:bg-portfolio-accent hover:text-white transition-colors">
+                </Link>
+                <Link to="/writing-portfolio" className="px-6 py-3 border border-portfolio-accent text-portfolio-accent rounded hover:bg-portfolio-accent hover:text-white transition-colors">
                   Explore Writing
-                </a>
+                </Link>
               </div>
             </div>
             <div className="order-1 md:order-2 animate-on-load">
