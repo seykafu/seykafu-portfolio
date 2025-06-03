@@ -13,37 +13,37 @@ const PrinciplesSection = () => {
         <div>
           <h3 className="text-xl font-bold mb-3">Always a Growth Mindset</h3>
           <p className="text-portfolio-text/80">
-            Embrace challenges as opportunities to learn, develop, and continuously improve.
+            I'm always trying to grow and learn :)
           </p>
         </div>
         <div>
           <h3 className="text-xl font-bold mb-3">Show Compassion</h3>
           <p className="text-portfolio-text/80">
-            Practice empathy and kindness in all interactions, recognizing everyone's unique journey.
+            Be nice and empathize with others
           </p>
         </div>
         <div>
           <h3 className="text-xl font-bold mb-3">Be Creative</h3>
           <p className="text-portfolio-text/80">
-            Approach problems with imagination and innovative thinking to discover unique solutions.
+            No rigid boundaries; think like the stars!
           </p>
         </div>
         <div>
           <h3 className="text-xl font-bold mb-3">Block Out the Noise</h3>
           <p className="text-portfolio-text/80">
-            Focus on what truly matters by filtering out distractions and staying committed to priorities.
+            Kick out digital distraction and only consume high-quality content (and be intentional!)
           </p>
         </div>
         <div>
           <h3 className="text-xl font-bold mb-3">Chaos Over Laziness</h3>
           <p className="text-portfolio-text/80">
-            Embrace productive disorder and experimentation rather than settling for comfort and inaction.
+            If need be, choose chaotic productiveness over just sitting around.
           </p>
         </div>
         <div>
           <h3 className="text-xl font-bold mb-3">Be Community Centric</h3>
           <p className="text-portfolio-text/80">
-            Prioritize collective growth and support networks that foster mutual success and advancement.
+            Always help the community :) See <a href="https://pmhive.io" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:text-portfolio-accent-light">PM Hive</a> :^)
           </p>
         </div>
       </div>

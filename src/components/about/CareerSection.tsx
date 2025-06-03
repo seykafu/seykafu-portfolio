@@ -33,12 +33,11 @@ const CareerSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
-          <div className="font-medium text-portfolio-accent">2021</div>
+          <div className="font-medium text-portfolio-accent">2017 - 2021</div>
           <div>
             <h3 className="text-xl font-bold">Various Internships</h3>
             <p className="text-lg text-portfolio-text/80 mt-2">
-              I interned at various companies including Unity, Veeva Systems, and SAP, 
-              gaining diverse experience across gaming, life sciences, and enterprise software industries.
+              I interned at various companies including Unity, Veeva Systems, SAP, LoyaltyOne, BlackBerry, and Qidni Labs.
             </p>
           </div>
         </div>

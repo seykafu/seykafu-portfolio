@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Book, Plane, Utensils } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HobbiesSection = () => {
   return (
@@ -13,7 +14,7 @@ const HobbiesSection = () => {
         <div className="bg-portfolio-muted/30 p-6 rounded-lg">
           <h3 className="text-xl font-bold mb-2">Writing</h3>
           <p className="text-portfolio-text/80">
-            I write both fiction and non-fiction! Check out my Writing Portfolio :)
+            I write both fiction and non-fiction! Check out my <Link to="/writing-portfolio" className="text-portfolio-accent hover:text-portfolio-accent-light">Writing Portfolio</Link> :)
           </p>
         </div>
         <div className="bg-portfolio-muted/30 p-6 rounded-lg">
