@@ -2,7 +2,8 @@
 import React from 'react';
 import CustomCursor from './CustomCursor';
 import Navbar from './Navbar';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter, BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -22,6 +23,10 @@ const Layout = ({ children }: LayoutProps) => {
             <p className="text-sm">© {new Date().getFullYear()} Kasey. All rights reserved.</p>
           </div>
           <div className="flex space-x-4">
+            <Link to="/journal" className="text-portfolio-text/60 hover:text-portfolio-accent transition-colors flex items-center gap-1">
+              <BookOpen className="w-4 h-4" />
+              <span>My Journal</span>
+            </Link>
             <a href="https://www.linkedin.com/in/kaseyfu/" target="_blank" rel="noopener noreferrer" className="text-portfolio-text/60 hover:text-portfolio-accent transition-colors flex items-center gap-1">
               <Linkedin className="w-4 h-4" />
               <span>LinkedIn</span>

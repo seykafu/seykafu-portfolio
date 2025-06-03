@@ -9,6 +9,7 @@ import ProductPortfolio from "./pages/ProductPortfolio";
 import WritingPortfolio from "./pages/WritingPortfolio";
 import CommunityWork from "./pages/CommunityWork";
 import About from "./pages/About";
+import Journal from "./pages/Journal";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/writing-portfolio" element={<WritingPortfolio />} />
           <Route path="/community-work" element={<CommunityWork />} />
           <Route path="/about" element={<About />} />
+          <Route path="/journal" element={<Journal />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 
@@ -8,6 +7,7 @@ interface ProductItem {
   description: string;
   image: string;
   video?: string;
+  link?: string;
 }
 
 const ProductPortfolio = () => {
@@ -24,6 +24,13 @@ const ProductPortfolio = () => {
       year: "2021-2023",
       description: "Improved Bing clickshare rate by 4% from 2023 to 2024 as the product manager in Bing's Web Data Platform team, shipping ML models to improve Bing Search results and caption accuracy.",
       image: "/lovable-uploads/cbcb4d24-3b85-4d2a-b9a5-20f86cda7c7b.png"
+    },
+    {
+      company: "Indie Games",
+      year: "2021-2024",
+      description: "I've developed or produced indie games before! I've developed a visual novel game that leverages AI for character conversations, and produced a 3D maze-runner survival game based on Unreal Engine.",
+      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420",
+      link: "https://seykafu.itch.io/"
     },
     {
       company: "Unity",
@@ -105,11 +112,21 @@ const ProductPortfolio = () => {
                     ) : (
                       <>
                         <div className="absolute inset-0 bg-portfolio-accent/20 group-hover:bg-portfolio-accent/10 transition-colors rounded-lg"></div>
-                        <img 
-                          src={product.image} 
-                          alt={product.company} 
-                          className="w-full h-48 md:h-60 object-cover rounded-lg"
-                        />
+                        {product.link ? (
+                          <a href={product.link} target="_blank" rel="noopener noreferrer">
+                            <img 
+                              src={product.image} 
+                              alt={product.company} 
+                              className="w-full h-48 md:h-60 object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity"
+                            />
+                          </a>
+                        ) : (
+                          <img 
+                            src={product.image} 
+                            alt={product.company} 
+                            className="w-full h-48 md:h-60 object-cover rounded-lg"
+                          />
+                        )}
                       </>
                     )}
                   </div>
@@ -119,6 +136,16 @@ const ProductPortfolio = () => {
                     <h2 className="font-serif text-3xl font-bold">{product.company}</h2>
                     <p className="text-portfolio-accent">{product.year}</p>
                     <p className="text-lg text-portfolio-text/80">{product.description}</p>
+                    {product.link && (
+                      <a 
+                        href={product.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-block text-portfolio-accent hover:text-portfolio-accent-light mt-2"
+                      >
+                        View games →
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
