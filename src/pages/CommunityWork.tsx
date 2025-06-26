@@ -25,7 +25,7 @@ const CommunityWork = () => {
                 <Button asChild variant="outline" className="border-portfolio-accent text-portfolio-accent hover:bg-portfolio-accent hover:text-black">
                   <a href="https://vantechweek.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                     <Calendar className="w-5 h-5" />
-                    <span>Visit Vancouver Tech Week</span>
+                    <span>Visit VTW</span>
                   </a>
                 </Button>
               </div>
