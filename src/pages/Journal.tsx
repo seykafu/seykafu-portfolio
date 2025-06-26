@@ -66,6 +66,28 @@ const Journal = () => {
       lifeContent: "I'm no longer a developing kid who can excuse themselves from spending more time doing well in their job or improving their career capital. I'm now a grown man heading into his mid-twenties.\n\nTime flies by fast! I didn't get half of the OKRs that I set for myself done this past year, and I feel like this year was also somewhat underwhelming when it came to my work ethic, especially at Microsoft.\n\nI think for 2022, it'll be about getting my shit together and stringing together everything I've learned up until now. There's a lot going on in the world: metaverse, NFTs, blockchain technologies, crypto, COVID, health tech, climate change, and more. A lot to cause stress and anxiety - but what's important is for me to continuously build my career capital and hone my skills as a PM! Also, I have experience starting side projects, so if I ever feel like I need to develop my skills in blockchain tech again, I can definitely still do so.\n\nI've spent a lot of time consuming entertainment (like reading manga) this year, much like last year. I think I need a more moderate way of consuming so I don't lose track of being a producer when it comes to work, rather than always being a consumer.\n\nAnd finally, I need to learn how to be more relentless. Work harder. Never lose those good habits of mine. Shrug off bad habits. Continuously be a better version of myself as much as I possibly can. Let's fucking do it."
     },
     {
+      year: "2022",
+      wwwContent: [
+        "A decent year with Microsoft, didn't get laid off, had a small promotion",
+        "Saved a decent amount of money",
+        "Published a book, and wrote two different novels!",
+        "A great year for my relationship",
+        "Spent a decent amount of time in both Van and Seattle",
+        "Spent some time with friends and family",
+        "Finally got my wisdom teeth taken out and got new retainers"
+      ],
+      wcbiContent: [
+        "A continuous bad sleep routine; it haunts me every day",
+        "I didn't stay in touch with so many connections and relationships I've built within the past few years… some friends in Toronto, some professors, and other friends",
+        "I didn't stay in shape or stay fit consistently",
+        "My diet has been pretty bad for the most part",
+        "Had episodes/periods of depression occasionally, usually when I was in Seattle living alone",
+        "I missed out on having a solo travel trip again this year",
+        "I was terrible at tracking my career capital and deep work. I missed out on a few months, but still managed to track some of it."
+      ],
+      lifeContent: "2022 was a rollercoaster. I spent 99% of my time on the west coast hopping back and forth between Seattle and Vancouver. I've also been consuming content off of Reddit and YouTube non-stop, to the point where my brain craves digital content whenever I'm away from it. Probably need some detoxing work for the upcoming year.\n\n2023 Should be the year of \"narrow\" focus for seykafu. Closing out bad habits, improving work productivity, improving my health and oral, and making sure I get better sleep.\n\nIt'll also be a critical year for where I go with my career. I've gotten over a year of product management experience at Microsoft under my belt, and it'll soon be time for me to decide where I want to start climbing, and what type of experience I want the most. General PM? Big company vs smaller? Start-up? Video game production? I'll have to make use of my time properly to ensure I pick a direction that I won't regret.\n\nOverall, the past year was still pretty stable for me. Work has been an uphill battle with some success, and I've managed to learn a fair bit at Microsoft. I feel like I've grown more mature, even if it was slightly. I sought a therapist again for just the second time in my life, I successfully published my novel, and even made a very tiny name for myself? When it came to publishing my web novels online. Well, not really a name for myself, but hey, at least my English has drastically improved? 😛\n\n### Action Items for 2023\n\n- Focus on the foundations of being a productive human being, and being \"narrow focused\" - by focusing my time and effort on improving a core set of \"crafts\":\n    - Wake up at or before 8 am at least 50% of all days (183 days)\n    - Walk at least 10k steps for 100 days of the year\n    - Limit my Reddit consumption to 4 hours per week\n    - Read 10 new books, no matter the genre."
+    },
+    {
       year: "2024",
       monthlyEntries: [
         {
