@@ -13,6 +13,12 @@ interface ProductItem {
 const ProductPortfolio = () => {
   const products: ProductItem[] = [
     {
+      company: "Unbounce",
+      year: "2025-Present",
+      description: "The Lead PM for Insightly CRM and Insightly AI Copilot, scaling growth from 10k mid-market and small business users to 100k.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+    },
+    {
       company: "Planview",
       year: "2023-2025",
       description: "The Lead PM for Planview's AI Assistant, Planview Copilot, growing the product from 0 to 1. Grew adoption from 0 to 110 customers and 0 to 1200 prompts per month.",
