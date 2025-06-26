@@ -31,7 +31,7 @@ const BookEnhanced = ({ pages }: BookProps) => {
       setTimeout(() => {
         setCurrentPage((prev) => prev - 1);
         setIsFlipping(false);
-      }, 500); // Match this with the CSS animation duration
+      }, 300);
     }
   };
 
@@ -43,21 +43,27 @@ const BookEnhanced = ({ pages }: BookProps) => {
       setTimeout(() => {
         setCurrentPage((prev) => prev + 1);
         setIsFlipping(false);
-      }, 500); // Match this with the CSS animation duration
+      }, 300);
     }
   };
 
   const page = pages[currentPage];
 
   return (
-    <div className="w-full max-w-4xl mx-auto perspective-[1500px]">
+    <div className="w-full max-w-4xl mx-auto perspective-[1500px] relative">
       <div className="book relative">
         {/* Book with spine and shadow effect */}
-        <Card className={`bg-[#f3f3f3] border border-gray-300 rounded-sm overflow-hidden shadow-[5px_5px_15px_rgba(0,0,0,0.2)] transform-gpu ${isFlipping ? direction === 'next' ? 'animate-page-flip-right' : 'animate-page-flip-left' : ''}`}>
+        <Card className={`bg-[#f3f3f3] border border-gray-300 rounded-sm overflow-hidden shadow-[5px_5px_15px_rgba(0,0,0,0.2)] transform-gpu transition-all duration-300 ease-out ${
+          isFlipping 
+            ? direction === 'next' 
+              ? 'animate-slide-out-right opacity-80 scale-98' 
+              : 'animate-slide-in-right opacity-80 scale-98'
+            : 'opacity-100 scale-100'
+        }`}>
           {/* Book spine */}
           <div className="absolute left-0 top-0 bottom-0 w-[12px] bg-gradient-to-r from-[#d2d0c6] to-[#f3f3f3] rounded-l-sm"></div>
           
-          <div className="pl-[12px]"> {/* Add padding to account for the spine */}
+          <div className="pl-[12px]">
             <div className="p-6 flex flex-col md:flex-row items-center gap-6">
               {/* Book Cover */}
               <div className="w-full md:w-2/5 relative rounded overflow-hidden shadow-md">
@@ -67,7 +73,7 @@ const BookEnhanced = ({ pages }: BookProps) => {
                       "/lovable-uploads/2d08fbdc-9eba-4431-b7da-337195c6dd04.png" : 
                       page.coverImage} 
                     alt={page.title} 
-                    className="object-cover w-full h-full"
+                    className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                   />
                 </AspectRatio>
               </div>
@@ -90,24 +96,68 @@ const BookEnhanced = ({ pages }: BookProps) => {
           </div>
         </Card>
 
-        {/* Navigation Controls */}
-        <div className="flex justify-between items-center mt-8">
+        {/* Enhanced Navigation Controls */}
+        <div className="flex justify-between items-center mt-8 relative">
+          {/* Previous Button */}
           <button 
             onClick={goToPrevPage} 
             disabled={currentPage === 0 || isFlipping}
-            className="p-2 bg-portfolio-muted rounded-full hover:bg-portfolio-accent/20 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            className={`group relative p-4 rounded-full transition-all duration-200 ${
+              currentPage === 0 || isFlipping
+                ? 'bg-portfolio-muted/30 text-portfolio-text/30 cursor-not-allowed'
+                : 'bg-portfolio-accent/20 hover:bg-portfolio-accent text-portfolio-accent hover:text-black hover:shadow-lg hover:scale-110'
+            }`}
           >
             <ArrowLeft size={24} />
+            <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              Previous
+            </span>
           </button>
-          <div className="text-sm text-portfolio-text/60">
-            {currentPage + 1} of {totalPages}
+
+          {/* Page Indicator */}
+          <div className="flex flex-col items-center space-y-2">
+            <div className="text-sm text-portfolio-text/60 font-medium">
+              {currentPage + 1} of {totalPages}
+            </div>
+            {/* Page dots */}
+            <div className="flex space-x-2">
+              {pages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    if (!isFlipping && index !== currentPage) {
+                      setDirection(index > currentPage ? 'next' : 'prev');
+                      setIsFlipping(true);
+                      setTimeout(() => {
+                        setCurrentPage(index);
+                        setIsFlipping(false);
+                      }, 300);
+                    }
+                  }}
+                  className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                    index === currentPage 
+                      ? 'bg-portfolio-accent scale-125' 
+                      : 'bg-portfolio-muted hover:bg-portfolio-accent/50 hover:scale-110'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
+
+          {/* Next Button */}
           <button 
             onClick={goToNextPage} 
             disabled={currentPage === totalPages - 1 || isFlipping}
-            className="p-2 bg-portfolio-muted rounded-full hover:bg-portfolio-accent/20 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
+            className={`group relative p-4 rounded-full transition-all duration-200 ${
+              currentPage === totalPages - 1 || isFlipping
+                ? 'bg-portfolio-muted/30 text-portfolio-text/30 cursor-not-allowed'
+                : 'bg-portfolio-accent/20 hover:bg-portfolio-accent text-portfolio-accent hover:text-black hover:shadow-lg hover:scale-110'
+            }`}
           >
             <ArrowRight size={24} />
+            <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+              Next
+            </span>
           </button>
         </div>
       </div>

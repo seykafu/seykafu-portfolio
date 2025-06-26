@@ -43,7 +43,7 @@ const PrinciplesSection = () => {
         <div>
           <h3 className="text-xl font-bold mb-3">Be Community Centric</h3>
           <p className="text-portfolio-text/80">
-            Always help the community :) See <a href="https://pmhive.io" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:text-portfolio-accent-light">PM Hive</a> :^)
+            Always help the community :) See <a href="https://pmhive.ca" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:text-portfolio-accent-light">PM Hive</a> :^)
           </p>
         </div>
       </div>
