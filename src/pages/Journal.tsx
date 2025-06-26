@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { Input } from '@/components/ui/input';
@@ -85,7 +86,7 @@ const Journal = () => {
         "I missed out on having a solo travel trip again this year",
         "I was terrible at tracking my career capital and deep work. I missed out on a few months, but still managed to track some of it."
       ],
-      lifeContent: "2022 was a rollercoaster. I spent 99% of my time on the west coast hopping back and forth between Seattle and Vancouver. I've also been consuming content off of Reddit and YouTube non-stop, to the point where my brain craves digital content whenever I'm away from it. Probably need some detoxing work for the upcoming year.\n\n2023 Should be the year of \"narrow\" focus for seykafu. Closing out bad habits, improving work productivity, improving my health and oral, and making sure I get better sleep.\n\nIt'll also be a critical year for where I go with my career. I've gotten over a year of product management experience at Microsoft under my belt, and it'll soon be time for me to decide where I want to start climbing, and what type of experience I want the most. General PM? Big company vs smaller? Start-up? Video game production? I'll have to make use of my time properly to ensure I pick a direction that I won't regret.\n\nOverall, the past year was still pretty stable for me. Work has been an uphill battle with some success, and I've managed to learn a fair bit at Microsoft. I feel like I've grown more mature, even if it was slightly. I sought a therapist again for just the second time in my life, I successfully published my novel, and even made a very tiny name for myself? When it came to publishing my web novels online. Well, not really a name for myself, but hey, at least my English has drastically improved? 😛\n\n### Action Items for 2023\n\n- Focus on the foundations of being a productive human being, and being \"narrow focused\" - by focusing my time and effort on improving a core set of \"crafts\":\n    - Wake up at or before 8 am at least 50% of all days (183 days)\n    - Walk at least 10k steps for 100 days of the year\n    - Limit my Reddit consumption to 4 hours per week\n    - Read 10 new books, no matter the genre."
+      lifeContent: "2022 was a rollercoaster. I spent 99% of my time on the west coast hopping back and forth between Seattle and Vancouver. I've also been consuming content off of Reddit and YouTube non-stop, to the point where my brain craves digital content whenever I'm away from it. Probably need some detoxing work for the upcoming year.\n\n2023 Should be the year of \"narrow\" focus for seykafu. Closing out bad habits, improving work productivity, improving my health and oral, and making sure I get better sleep.\n\nIt'll also be a critical year for where I go with my career. I've gotten over a year of product management experience at Microsoft under my belt, and it'll soon be time for me to decide where I want to start climbing, and what type of experience I want the most. General PM? Big company vs smaller? Start-up? Video game production? I'll have to make use of my time properly to ensure I pick a direction that I won't regret.\n\nOverall, the past year was still pretty stable for me. Work has been an uphill battle with some success, and I've managed to learn a fair bit at Microsoft. I feel like I've grown more mature, even if it was slightly. I sought a therapist again for just the second time in my life, I successfully published my novel, and even made a very tiny name for myself? When it came to publishing my web novels online. Well, not really a name for myself, but hey, at least my English has drastically improved? 😛\n\nAction Items for 2023\n\n- Focus on the foundations of being a productive human being, and being \"narrow focused\" - by focusing my time and effort on improving a core set of \"crafts\":\n    - Wake up at or before 8 am at least 50% of all days (183 days)\n    - Walk at least 10k steps for 100 days of the year\n    - Limit my Reddit consumption to 4 hours per week\n    - Read 10 new books, no matter the genre."
     },
     {
       year: "2023",
@@ -109,7 +110,7 @@ const Journal = () => {
         "I didn't end up focusing on a core craft - I dived into a multitude of things to explore (VNs, a bit of coding, writing, game production, etc.)",
         "While I did earn a lot, I didn't save as much as I should've"
       ],
-      lifeContent: "I think 2023 was more of a whirlwind than 2022, but hey, I keep saying that about every year. There's probably a bit of recency bias. But man! I got fucking pierced, moved back to Vancouver for a new job, participated in an indie game team, and spent waaaay to many hours playing Zelda. I also made two trips to Japan - fucking hell. I also made my first trip to NYC, and made two trips back to Toronto (one was for an ETH hackathon, wow.). Fun travels!\n\nNeedless to say, life treated me both well and poorly. I was poor in tracking my career capital again, but I think my job-change (and gaining the subsequent new responsibilities that an actual PM should have) made up for it. Well, so far it has, but let's see how I fair under my new boss.\n\nLet's see, what else? Well, besides working on an indie game, I even made my own fucking Visual Novel with some AI added into it. I'm proud of my work! I know I went all over the place again this year instead of focusing on a core craft, but I guess if I were to come up with an excuse, it's that my 20s are the time to really explore and touch as many things as I can. I'm that type of fucking guy, after all.\n\nLooking back, what made this year stand out to me the most were my trips to Japan, my interest in game production, my stocks going to the moon, my decision to come back to Van, and my new earrings. But look, every year, I say I'm going to build this craft, that craft, make myself rich by 30, become a CEO one day, become famous, world-known, blah blah blah…\n\nWell, I still have big dreams for myself. I always will. But I think for 2024, pragmatically speaking, I have to start prioritizing things to make proper time for the things I care about the most. I feel like I have some leeway in exploring, but soon (I'm going to be 30 in a blink of an eye!), that shit won't last.\n\n### Action Items for 2024\n\n- There's more to life when I open up my heart, live to my true values, and stick to my morals.\n- Talk shit, get hit. Fuck around, I turn into a clown.\n- Prioritize just a little bit more than I did in 2023. Keep growing that product management career, but start focusing my industry knowledge in a certain direction. AI? Games? Who knows, but this is where passion has its way.\n- I'm okay at writing. I have to convince myself that I have the power to get better. I have high potential… I think. So let's keep writing.\n- Exercise. Exercise. Exercise! Fuck me, I really need a routine.\n- Startups! Community! AI! Product! Money! Writing! 😽\n- Figure out what to do with my relationship. Do I save it or is it time to break hearts one more time?"
+      lifeContent: "I think 2023 was more of a whirlwind than 2022, but hey, I keep saying that about every year. There's probably a bit of recency bias. But man! I got fucking pierced, moved back to Vancouver for a new job, participated in an indie game team, and spent waaaay to many hours playing Zelda. I also made two trips to Japan - fucking hell. I also made my first trip to NYC, and made two trips back to Toronto (one was for an ETH hackathon, wow.). Fun travels!\n\nNeedless to say, life treated me both well and poorly. I was poor in tracking my career capital again, but I think my job-change (and gaining the subsequent new responsibilities that an actual PM should have) made up for it. Well, so far it has, but let's see how I fair under my new boss.\n\nLet's see, what else? Well, besides working on an indie game, I even made my own fucking Visual Novel with some AI added into it. I'm proud of my work! I know I went all over the place again this year instead of focusing on a core craft, but I guess if I were to come up with an excuse, it's that my 20s are the time to really explore and touch as many things as I can. I'm that type of fucking guy, after all.\n\nLooking back, what made this year stand out to me the most were my trips to Japan, my interest in game production, my stocks going to the moon, my decision to come back to Van, and my new earrings. But look, every year, I say I'm going to build this craft, that craft, make myself rich by 30, become a CEO one day, become famous, world-known, blah blah blah…\n\nWell, I still have big dreams for myself. I always will. But I think for 2024, pragmatically speaking, I have to start prioritizing things to make proper time for the things I care about the most. I feel like I have some leeway in exploring, but soon (I'm going to be 30 in a blink of an eye!), that shit won't last.\n\nAction Items for 2024\n\n- There's more to life when I open up my heart, live to my true values, and stick to my morals.\n- Talk shit, get hit. Fuck around, I turn into a clown.\n- Prioritize just a little bit more than I did in 2023. Keep growing that product management career, but start focusing my industry knowledge in a certain direction. AI? Games? Who knows, but this is where passion has its way.\n- I'm okay at writing. I have to convince myself that I have the power to get better. I have high potential… I think. So let's keep writing.\n- Exercise. Exercise. Exercise! Fuck me, I really need a routine.\n- Startups! Community! AI! Product! Money! Writing! 😽\n- Figure out what to do with my relationship. Do I save it or is it time to break hearts one more time?"
     },
     {
       year: "2024",
@@ -135,60 +136,7 @@ const Journal = () => {
         "My lower back pain has returned in a big wave, and now it seems to be permanent, and my physio training has been inconsistent",
         "My technical skills somewhat dwindled due to my lack of focus on technical software related education."
       ],
-      lifeContent: "I don't even know where to begin.\n\nSOOO much has happened this year, it's been absolutely crazy. As mentioned last time, I make a joke about how every year feels more hectic than the previous, but I can assure myself that this past year was absolutely a whirlwind and a half, and there is NO RECENCY BIAS whatsoever. Crazy.\n\nSo yeah - A full year in Vancouver, where I grew in my job, did a whole ass week of tech events called Vancouver Tech Week with Toki, grew my PM community called PM Hive, and made so many new friends and even a few romantic interests.\n\nThe year also flew by like a fucking speedboat, dragging me on from behind while I hung onto the rope for dear life.\n\nSo first of all, the first half of 2024 was a little bit more calm. I traveled to SF and the UK which was fun, and also went to Japan with Tiger, Jack, Jimmy, and Jessie - such beautiful memories. A few other highlights include driving to Harrison Hotsprings resort with Steph (when we were still together) for her birthday, and trying to fix the relationship. It ultimately wasn't salvageable, but I'm glad I gave it a try incase I had regrets.\n\nThe second half was when the world was turning like there was no tomorrow. I met Gabriela soon after my breakup with Steph, started going on dating apps, and started experiencing a type of anxiety/stress/bundle of negative feelings from her being poly that I've never experienced before in my life. It was a hell of an experience to process. Moreover, PM Hive grew well, and work was somewhat stressful, but Vancouver Tech Week back in September was a hell of an experience in and of itself.\n\nNear the end of the year (last few months) I started hosting and attending parties/gatherings. Honestly, that's another part of my year where I don't know where to start - I never knew I had it in me to manage these events, but next thing you know, there I was, hosting party/event after party/event and having a fun time meeting new friends/bonding with old friends. kept in touch with some of my closest friends, which I am thankful for.\n\nAs I write this, a mix of both positive and negative emotions continue to overwhelm me to the brim, but for some reason, I feel like the negative emotions/energy is finally starting to settle just a little bit (mostly due to dating Gabriela), and my ability to self-intellectualize has finally returned. I'm hoping to continue the trend of self-intellectualization and logically-maneuvering my way around my career and relationships, but obviously without compromising who I truly am (a feeler).\n\nOnward to 2025 with my head held high and my heart as big as ever. Let's fucking do it!\n\n### Action Items for 2025\n\n- Be more honest and don't be a liar.\n- Listen to my heart and my head at the same time, but when needed, follow my heart.\n- Improve my writing habits and get that book done! Or maybe even two… 👀\n- Continue growing both interpersonally and professionally\n- Start looking for a new PM gig! Startups!\n- Explore different business/startup ideas\n- Continue growing PM Hive into that vision!\n- Don't be afraid to try new things and explore new places/people/experiences\n- Save a little bit more money, and build better habits (writing/journaling, working out)"
-    },
-    {
-      year: "2024",
-      monthlyEntries: [
-        {
-          month: "January 2024",
-          content: "Starting the year with renewed energy and focus. Working on exciting new product initiatives at Planview and continuing to build meaningful connections in the PM community. The winter months always give me time to reflect and plan for the months ahead."
-        },
-        {
-          month: "February 2024",
-          content: "February has been all about deep work and strategic planning. Spent considerable time refining our AI assistant roadmap and engaging with customers to understand their evolving needs. Also been enjoying some creative writing in the evenings."
-        },
-        {
-          month: "March 2024",
-          content: "Spring is here and with it comes new opportunities. Been exploring some exciting side projects and continuing to grow the PM Hive community. The energy of this season always inspires me to think bigger and bolder."
-        },
-        {
-          month: "April 2024",
-          content: "April brought some significant milestones in our product development. Seeing user adoption grow has been incredibly rewarding. Also spent time traveling and gathering inspiration from different cultures and perspectives."
-        },
-        {
-          month: "May 2024",
-          content: "Mid-year reflections are setting in. The balance between work, creativity, and personal growth continues to be a central theme. Been diving deeper into some indie game development projects that combine my love for storytelling and technology."
-        },
-        {
-          month: "June 2024",
-          content: "Summer vibes and increased productivity. The longer days give me more energy to tackle complex problems and explore new ideas. Community work has been particularly fulfilling this month, connecting with fellow product managers and sharing insights."
-        },
-        {
-          month: "July 2024",
-          content: "July has been about pushing boundaries and exploring new territories. Both literally through travel and figuratively through product innovation. The indie game projects are gaining momentum and teaching me new aspects of user experience design."
-        },
-        {
-          month: "August 2024",
-          content: "Late summer brings a sense of accomplishment. Looking back at the year so far, there's been substantial growth both professionally and personally. The chaos-over-laziness principle continues to serve me well in navigating complex challenges."
-        },
-        {
-          month: "September 2024",
-          content: "September always feels like a fresh start. Back to focused work after summer adventures. The product metrics are looking strong, and the team dynamics continue to improve. Been spending more time on creative writing and exploring new storytelling formats."
-        },
-        {
-          month: "October 2024",
-          content: "Fall energy brings clarity and focus. Working on some exciting new features that could significantly impact user experience. The seasonal change always reminds me to embrace growth mindset and stay curious about emerging trends."
-        },
-        {
-          month: "November 2024",
-          content: "Gratitude month has me reflecting on the incredible journey this year has been. The community-centric approach continues to open doors and create meaningful connections. Planning for the final sprint of the year while maintaining balance."
-        },
-        {
-          month: "December 2024",
-          content: "Wrapping up an incredible year of growth, challenges, and discoveries. The product launches exceeded expectations, and the personal projects have evolved in unexpected directions. Looking forward to what the new year will bring while staying grounded in the present moment."
-        }
-      ]
+      lifeContent: "I don't even know where to begin.\n\nSOOO much has happened this year, it's been absolutely crazy. As mentioned last time, I make a joke about how every year feels more hectic than the previous, but I can assure myself that this past year was absolutely a whirlwind and a half, and there is NO RECENCY BIAS whatsoever. Crazy.\n\nSo yeah - A full year in Vancouver, where I grew in my job, did a whole ass week of tech events called Vancouver Tech Week with Toki, grew my PM community called PM Hive, and made so many new friends and even a few romantic interests.\n\nThe year also flew by like a fucking speedboat, dragging me on from behind while I hung onto the rope for dear life.\n\nSo first of all, the first half of 2024 was a little bit more calm. I traveled to SF and the UK which was fun, and also went to Japan with Tiger, Jack, Jimmy, and Jessie - such beautiful memories. A few other highlights include driving to Harrison Hotsprings resort with Steph (when we were still together) for her birthday, and trying to fix the relationship. It ultimately wasn't salvageable, but I'm glad I gave it a try incase I had regrets.\n\nThe second half was when the world was turning like there was no tomorrow. I met Gabriela soon after my breakup with Steph, started going on dating apps, and started experiencing a type of anxiety/stress/bundle of negative feelings from her being poly that I've never experienced before in my life. It was a hell of an experience to process. Moreover, PM Hive grew well, and work was somewhat stressful, but Vancouver Tech Week back in September was a hell of an experience in and of itself.\n\nNear the end of the year (last few months) I started hosting and attending parties/gatherings. Honestly, that's another part of my year where I don't know where to start - I never knew I had it in me to manage these events, but next thing you know, there I was, hosting party/event after party/event and having a fun time meeting new friends/bonding with old friends. kept in touch with some of my closest friends, which I am thankful for.\n\nAs I write this, a mix of both positive and negative emotions continue to overwhelm me to the brim, but for some reason, I feel like the negative emotions/energy is finally starting to settle just a little bit (mostly due to dating Gabriela), and my ability to self-intellectualize has finally returned. I'm hoping to continue the trend of self-intellectualization and logically-maneuvering my way around my career and relationships, but obviously without compromising who I truly am (a feeler).\n\nOnward to 2025 with my head held high and my heart as big as ever. Let's fucking do it!\n\nAction Items for 2025\n\n- Be more honest and don't be a liar.\n- Listen to my heart and my head at the same time, but when needed, follow my heart.\n- Improve my writing habits and get that book done! Or maybe even two… 👀\n- Continue growing both interpersonally and professionally\n- Start looking for a new PM gig! Startups!\n- Explore different business/startup ideas\n- Continue growing PM Hive into that vision!\n- Don't be afraid to try new things and explore new places/people/experiences\n- Save a little bit more money, and build better habits (writing/journaling, working out)"
     }
   ];
 
@@ -232,70 +180,51 @@ const Journal = () => {
           </p>
 
           <div className="space-y-16">
+            <h2 className="font-serif text-3xl font-bold mb-8 text-portfolio-accent">
+              Yearly Manifestos
+            </h2>
             {journalYears.map((yearData, index) => (
               <div key={index} className="border-l-4 border-portfolio-accent pl-8">
-                <h2 className="font-serif text-3xl font-bold mb-8 text-portfolio-accent">
+                <h3 className="font-serif text-2xl font-bold mb-8 text-portfolio-text">
                   {yearData.year}
-                </h2>
+                </h3>
                 
-                {yearData.wwwContent && (
-                  <>
-                    <div className="mb-8">
-                      <h3 className="font-serif text-xl font-semibold mb-4 text-portfolio-text">
-                        WWW (What Went Well)
-                      </h3>
-                      <ul className="space-y-2">
-                        {yearData.wwwContent.map((item, itemIndex) => (
-                          <li key={itemIndex} className="text-portfolio-text/80 leading-relaxed flex items-start">
-                            <span className="text-portfolio-accent mr-2">•</span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="mb-8">
-                      <h3 className="font-serif text-xl font-semibold mb-4 text-portfolio-text">
-                        WCBI (What Could Be Improved)
-                      </h3>
-                      <ul className="space-y-2">
-                        {yearData.wcbiContent.map((item, itemIndex) => (
-                          <li key={itemIndex} className="text-portfolio-text/80 leading-relaxed flex items-start">
-                            <span className="text-portfolio-accent mr-2">•</span>
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="mb-8">
-                      <h3 className="font-serif text-xl font-semibold mb-4 text-portfolio-text">
-                        My Life in {parseInt(yearData.year) + 1}
-                      </h3>
-                      <div className="text-portfolio-text/80 leading-relaxed whitespace-pre-line">
-                        {yearData.lifeContent}
-                      </div>
-                    </div>
-                  </>
-                )}
-
-                {yearData.monthlyEntries && (
-                  <div className="space-y-8">
-                    <h3 className="font-serif text-xl font-semibold mb-6 text-portfolio-text">
-                      Monthly Reflections
-                    </h3>
-                    {yearData.monthlyEntries.map((entry, entryIndex) => (
-                      <div key={entryIndex} className="border-l-2 border-portfolio-muted/30 pl-4">
-                        <h4 className="font-serif text-lg font-medium mb-2 text-portfolio-text/90">
-                          {entry.month}
-                        </h4>
-                        <p className="text-portfolio-text/80 leading-relaxed">
-                          {entry.content}
-                        </p>
-                      </div>
+                <div className="mb-8">
+                  <h4 className="font-serif text-xl font-semibold mb-4 text-portfolio-text">
+                    WWW (What Went Well)
+                  </h4>
+                  <ul className="space-y-2">
+                    {yearData.wwwContent.map((item, itemIndex) => (
+                      <li key={itemIndex} className="text-portfolio-text/80 leading-relaxed flex items-start">
+                        <span className="text-portfolio-accent mr-2">•</span>
+                        {item}
+                      </li>
                     ))}
+                  </ul>
+                </div>
+
+                <div className="mb-8">
+                  <h4 className="font-serif text-xl font-semibold mb-4 text-portfolio-text">
+                    WCBI (What Could Be Improved)
+                  </h4>
+                  <ul className="space-y-2">
+                    {yearData.wcbiContent.map((item, itemIndex) => (
+                      <li key={itemIndex} className="text-portfolio-text/80 leading-relaxed flex items-start">
+                        <span className="text-portfolio-accent mr-2">•</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-8">
+                  <h4 className="font-serif text-xl font-semibold mb-4 text-portfolio-text">
+                    My Life in {parseInt(yearData.year) + 1}
+                  </h4>
+                  <div className="text-portfolio-text/80 leading-relaxed whitespace-pre-line">
+                    {yearData.lifeContent}
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
