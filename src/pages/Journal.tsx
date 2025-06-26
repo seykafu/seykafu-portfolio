@@ -113,6 +113,32 @@ const Journal = () => {
     },
     {
       year: "2024",
+      wwwContent: [
+        "Bought a new cat again after losing Rhea, her name is Khione! I love her <3",
+        "Bought a new apartment with the help of family! I moved in and have finally established my home base, and I love this place.",
+        "Made a bunch of new friends in Vancouver thanks to my social gatherings, community-building, and more! Especially some close ones, like Sarim and Toki.",
+        "Traveled a lot! Went to SF, MTL, Amsterdam, UK, NYC, Yale, Japan, Toronto, and Van Island (Tofino)!",
+        "Started dating again after breaking up with Steph, and have been enjoying the relationship outside the poly stuff!",
+        "I worked out more than I did last year!",
+        "Re-contributed to my TFSA and my RRSP!",
+        "Started cooking and baking more again! And started writing & registered to publish my new non-fiction book idea!",
+        "Broke up with Steph in a healthy way",
+        "Ran Vancouver Tech Week and improved my public awareness, PR, and my public-speaking skills",
+        "Grew my PM community (PM Hive) to a big well-known brand in Vancouver!"
+      ],
+      wcbiContent: [
+        "Didn't do enough writing at all, need to get better at building writing habits!",
+        "Somewhat recklessly got into a new relationship despite knowing it's poly. Had a lot of negative feelings to manage, and a lot of anxiety that came with it.",
+        "Not enough training and support to improve my back! Need to get back into the exercises and physio!",
+        "Managing my productivity and career capital for work has been challenging due to my online addictions and the new relationship (even texting a lot during work…)",
+        "Didn't save as much due to my food/unhealthy spending habits, even despite the fact that my mortgage isn't too bad",
+        "My lower back pain has returned in a big wave, and now it seems to be permanent, and my physio training has been inconsistent",
+        "My technical skills somewhat dwindled due to my lack of focus on technical software related education."
+      ],
+      lifeContent: "I don't even know where to begin.\n\nSOOO much has happened this year, it's been absolutely crazy. As mentioned last time, I make a joke about how every year feels more hectic than the previous, but I can assure myself that this past year was absolutely a whirlwind and a half, and there is NO RECENCY BIAS whatsoever. Crazy.\n\nSo yeah - A full year in Vancouver, where I grew in my job, did a whole ass week of tech events called Vancouver Tech Week with Toki, grew my PM community called PM Hive, and made so many new friends and even a few romantic interests.\n\nThe year also flew by like a fucking speedboat, dragging me on from behind while I hung onto the rope for dear life.\n\nSo first of all, the first half of 2024 was a little bit more calm. I traveled to SF and the UK which was fun, and also went to Japan with Tiger, Jack, Jimmy, and Jessie - such beautiful memories. A few other highlights include driving to Harrison Hotsprings resort with Steph (when we were still together) for her birthday, and trying to fix the relationship. It ultimately wasn't salvageable, but I'm glad I gave it a try incase I had regrets.\n\nThe second half was when the world was turning like there was no tomorrow. I met Gabriela soon after my breakup with Steph, started going on dating apps, and started experiencing a type of anxiety/stress/bundle of negative feelings from her being poly that I've never experienced before in my life. It was a hell of an experience to process. Moreover, PM Hive grew well, and work was somewhat stressful, but Vancouver Tech Week back in September was a hell of an experience in and of itself.\n\nNear the end of the year (last few months) I started hosting and attending parties/gatherings. Honestly, that's another part of my year where I don't know where to start - I never knew I had it in me to manage these events, but next thing you know, there I was, hosting party/event after party/event and having a fun time meeting new friends/bonding with old friends. kept in touch with some of my closest friends, which I am thankful for.\n\nAs I write this, a mix of both positive and negative emotions continue to overwhelm me to the brim, but for some reason, I feel like the negative emotions/energy is finally starting to settle just a little bit (mostly due to dating Gabriela), and my ability to self-intellectualize has finally returned. I'm hoping to continue the trend of self-intellectualization and logically-maneuvering my way around my career and relationships, but obviously without compromising who I truly am (a feeler).\n\nOnward to 2025 with my head held high and my heart as big as ever. Let's fucking do it!\n\n### Action Items for 2025\n\n- Be more honest and don't be a liar.\n- Listen to my heart and my head at the same time, but when needed, follow my heart.\n- Improve my writing habits and get that book done! Or maybe even two… 👀\n- Continue growing both interpersonally and professionally\n- Start looking for a new PM gig! Startups!\n- Explore different business/startup ideas\n- Continue growing PM Hive into that vision!\n- Don't be afraid to try new things and explore new places/people/experiences\n- Save a little bit more money, and build better habits (writing/journaling, working out)"
+    },
+    {
+      year: "2024",
       monthlyEntries: [
         {
           month: "January 2024",
