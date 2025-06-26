@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '../components/Layout';
 import { Calendar, Users, Link } from 'lucide-react';
@@ -16,12 +15,20 @@ const CommunityWork = () => {
               <p className="text-lg text-portfolio-text/80 mb-8">
                 As a passionate community builder, I co-founded PM Hive - Vancouver's premier Product Management community - back in 2023. I'm also a co-organizer of Vancouver Tech Week, bringing together tech professionals from across the region to connect, learn, and grow together.
               </p>
-              <Button asChild className="bg-portfolio-accent hover:bg-portfolio-accent-light text-black">
-                <a href="https://pmhive.ca" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <Users className="w-5 h-5" />
-                  <span>Visit PM Hive</span>
-                </a>
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild className="bg-portfolio-accent hover:bg-portfolio-accent-light text-black">
+                  <a href="https://pmhive.ca" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    <Users className="w-5 h-5" />
+                    <span>Visit PM Hive</span>
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="border-portfolio-accent text-portfolio-accent hover:bg-portfolio-accent hover:text-black">
+                  <a href="https://vantechweek.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                    <Calendar className="w-5 h-5" />
+                    <span>Visit Vancouver Tech Week</span>
+                  </a>
+                </Button>
+              </div>
             </div>
             <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-portfolio-accent/30 to-transparent z-10"></div>
