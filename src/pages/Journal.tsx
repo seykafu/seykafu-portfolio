@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import { Input } from '@/components/ui/input';
@@ -43,6 +42,28 @@ const Journal = () => {
         "Bought TWO keyboards...and never really learned how to play at all."
       ],
       lifeContent: "I'll be turning 23 by the end of next year. I'm getting old, and I have only a few years left to truly reduce any leftover ambiguity related to my professional career goals.\n\nI want to spend 2021 in a state of constantly learning, but I also want to ensure that I'm doing things, whether that's performing tasks, working on projects, or anything else of the sort, consistently. I have a strong vision for myself in the next few years, but it's time to fall back down to Earth and begin with working on hands-on skills instead of always being in the clouds!\n\nSo for my professional life, I want to ensure that I'm developing hands-on skills as much as I am putting in effort to experiment and discover what I like and dislike. I really want to land an amazing full-time job somewhere in the realm of product management! What I do in the first half of 2021 will truly dictate my job search results.\n\nFor my personal life, it's about improving self care, my mental state, constantly learning and taking in new information & knowledge, and finally, growing with my relationship. Hopefully I'll still be in this relationship by the time I read this at the end of 2021 🙂."
+    },
+    {
+      year: "2021",
+      wwwContent: [
+        "Was able to meet with old friends and made some new ones",
+        "Built on my relationship with Steph",
+        "Got a few job offers and accepted one from Microsoft",
+        "Moved to a new city late into the year as part of my new job",
+        "Had a few really strong mentors for both PM and general career advice",
+        "Had a really nice internship (and summer with Steph) at Unity and made new friends from Riipen!",
+        "A hardworking year full of work and earning money, as well as learning more about investments and saving money"
+      ],
+      wcbiContent: [
+        "Shenkii went into the dust - it could've been a really cool and popular project",
+        "Spent my first few months at Microsoft without as many wins as I wanted",
+        "Could've gone on a solo travel trip when I had the time to clear my mind",
+        "I could've done a better job improving the amount of career capital and deep work I was doing",
+        "I spent a considerable amount of money over the course of the year, especially from Oct - Dec. Need to be more frugal in my spending!",
+        "My health-related visits have been inconsistent. I had to push back my oral surgery even though I could've gotten it out of the way in the summer.",
+        "My sleep routine was terrible and inconsistent for over half of the year. It need to get in a habit of a better sleep routine that fits well with the rest of my work routine!"
+      ],
+      lifeContent: "I'm no longer a developing kid who can excuse themselves from spending more time doing well in their job or improving their career capital. I'm now a grown man heading into his mid-twenties.\n\nTime flies by fast! I didn't get half of the OKRs that I set for myself done this past year, and I feel like this year was also somewhat underwhelming when it came to my work ethic, especially at Microsoft.\n\nI think for 2022, it'll be about getting my shit together and stringing together everything I've learned up until now. There's a lot going on in the world: metaverse, NFTs, blockchain technologies, crypto, COVID, health tech, climate change, and more. A lot to cause stress and anxiety - but what's important is for me to continuously build my career capital and hone my skills as a PM! Also, I have experience starting side projects, so if I ever feel like I need to develop my skills in blockchain tech again, I can definitely still do so.\n\nI've spent a lot of time consuming entertainment (like reading manga) this year, much like last year. I think I need a more moderate way of consuming so I don't lose track of being a producer when it comes to work, rather than always being a consumer.\n\nAnd finally, I need to learn how to be more relentless. Work harder. Never lose those good habits of mine. Shrug off bad habits. Continuously be a better version of myself as much as I possibly can. Let's fucking do it."
     },
     {
       year: "2024",
