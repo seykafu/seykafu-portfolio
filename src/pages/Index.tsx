@@ -1,35 +1,6 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import SpotlightHero from '../components/SpotlightHero';
-import { Link } from 'react-router-dom';
-import { Rocket, PenTool, Users, Compass } from 'lucide-react';
-
-const explore = [
-  {
-    to: '/product-portfolio',
-    icon: Rocket,
-    title: 'Product',
-    description: 'AI products at Disco, Unbounce, Planview, Microsoft & more.',
-  },
-  {
-    to: '/writing-portfolio',
-    icon: PenTool,
-    title: 'Writing',
-    description: 'Books, blogs, and essays — including Doing the Dream.',
-  },
-  {
-    to: '/community-work',
-    icon: Users,
-    title: 'Community',
-    description: "PM Hive — Vancouver's product management community.",
-  },
-  {
-    to: '/career-support',
-    icon: Compass,
-    title: 'Career Support',
-    description: 'Coaching, resume reviews, and mentorship for PMs.',
-  },
-];
 
 const Index = () => {
   useEffect(() => {
@@ -66,20 +37,6 @@ const Index = () => {
                 events, and play video games! I also have a small cat named
                 Khione.
               </p>
-              <div className="mt-8 flex space-x-4 animate-on-load">
-                <Link
-                  to="/product-portfolio"
-                  className="rounded bg-portfolio-accent px-6 py-3 text-white transition-colors hover:bg-portfolio-accent-light"
-                >
-                  View Product Work
-                </Link>
-                <Link
-                  to="/career-support"
-                  className="rounded border border-portfolio-accent px-6 py-3 text-portfolio-accent transition-colors hover:bg-portfolio-accent hover:text-white"
-                >
-                  Career Support
-                </Link>
-              </div>
             </div>
             <div className="animate-on-load">
               <div className="relative h-[400px] w-full overflow-hidden rounded-lg shadow-2xl md:h-[500px]">
@@ -91,31 +48,6 @@ const Index = () => {
                 />
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Explore cards */}
-        <section className="pb-24">
-          <p className="mb-8 text-xs uppercase tracking-[0.35em] text-portfolio-text/50 animate-on-load">
-            Explore
-          </p>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {explore.map((item) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                className="liquid-glass group rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-1 animate-on-load"
-              >
-                <item.icon className="h-6 w-6 text-portfolio-accent transition-transform duration-300 group-hover:scale-110" />
-                <h3 className="mt-4 font-display text-2xl">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-portfolio-text/60">
-                  {item.description}
-                </p>
-                <span className="mt-4 inline-block text-sm text-portfolio-accent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Explore →
-                </span>
-              </Link>
-            ))}
           </div>
         </section>
       </div>
