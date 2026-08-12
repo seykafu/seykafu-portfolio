@@ -21,7 +21,7 @@ const hobbies = [
   'Video games',
   'Baking',
   'Traveling',
-  'Cat mom to Khione 🐱',
+  'Cat dad to Khione 🐱',
 ];
 
 const CardLabel = ({
