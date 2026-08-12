@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Briefcase, Rocket } from 'lucide-react';
 
 interface ProductItem {
   company: string;
@@ -112,7 +114,11 @@ const personalProducts: ProductItem[] = [
 const ProductList = ({ products }: { products: ProductItem[] }) => (
   <div className="space-y-16">
     {products.map((product, index) => (
-      <div key={index} className="product-item grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div
+        key={index}
+        className="animate-fade-up grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+        style={{ animationDelay: `${index * 80}ms` }}
+      >
         <div className={`${index % 2 === 0 ? 'order-1' : 'order-1 md:order-2'}`}>
           <div className="relative group">
             {product.video ? (
@@ -162,55 +168,47 @@ const ProductList = ({ products }: { products: ProductItem[] }) => (
 );
 
 const ProductPortfolio = () => {
-  useEffect(() => {
-    // Animation for product items
-    const items = document.querySelectorAll('.product-item');
-    items.forEach((item, index) => {
-      const element = item as HTMLElement;
-      element.style.opacity = '0';
-      element.style.transform = 'translateY(20px)';
-
-      setTimeout(() => {
-        element.style.transition = 'all 0.5s ease-out';
-        element.style.opacity = '1';
-        element.style.transform = 'translateY(0)';
-      }, 100 * (index + 1));
-    });
-  }, []);
-
   return (
     <Layout>
       <div className="container mx-auto px-4 md:px-6">
         <section className="py-16">
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Product Portfolio</h1>
-          <p className="text-lg text-portfolio-text/80 max-w-3xl mb-12">
+          <p className="text-lg text-portfolio-text/80 max-w-3xl mb-10">
             Throughout my career, I've had the privilege of working at innovative companies
             across various industries, from enterprise software to gaming, blockchain, and beyond.
           </p>
 
-          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-10 flex items-center gap-3">
-            Work Product Portfolio
-            <span className="hidden sm:block h-[1px] flex-1 bg-portfolio-muted/60" />
-          </h2>
-          <ProductList products={workProducts} />
+          <Tabs defaultValue="work" className="w-full">
+            <TabsList className="grid w-full max-w-md grid-cols-2 mb-12">
+              <TabsTrigger value="work" className="flex items-center gap-2">
+                <Briefcase className="h-4 w-4" />
+                <span>Work</span>
+              </TabsTrigger>
+              <TabsTrigger value="personal" className="flex items-center gap-2">
+                <Rocket className="h-4 w-4" />
+                <span>Personal</span>
+              </TabsTrigger>
+            </TabsList>
 
-          <h2 className="font-serif text-2xl md:text-3xl font-bold mt-24 mb-4 flex items-center gap-3">
-            Personal Product Portfolio
-            <span className="hidden sm:block h-[1px] flex-1 bg-portfolio-muted/60" />
-          </h2>
-          <p className="text-lg text-portfolio-text/80 max-w-3xl mb-10">
-            Products I've built and shipped on my own time. Side projects turned into real things people use.
-          </p>
-          <ProductList products={personalProducts} />
+            <TabsContent value="work" className="focus-visible:outline-none">
+              <ProductList products={workProducts} />
+            </TabsContent>
 
-          <a
-            href="https://seykafu.notion.site/Seykafu-a8fda5021a274d82af74341b9a4a9f2e"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-portfolio-accent hover:text-portfolio-accent-light mt-16"
-          >
-            View more side projects →
-          </a>
+            <TabsContent value="personal" className="focus-visible:outline-none">
+              <p className="animate-fade-up text-lg text-portfolio-text/80 max-w-3xl mb-10">
+                Products I've built and shipped on my own time. Side projects turned into real things people use.
+              </p>
+              <ProductList products={personalProducts} />
+              <a
+                href="https://seykafu.notion.site/Seykafu-a8fda5021a274d82af74341b9a4a9f2e"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block text-portfolio-accent hover:text-portfolio-accent-light mt-16"
+              >
+                View more side projects →
+              </a>
+            </TabsContent>
+          </Tabs>
         </section>
       </div>
     </Layout>
