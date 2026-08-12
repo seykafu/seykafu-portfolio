@@ -114,7 +114,7 @@ const SpotlightHero = () => {
 
       {/* Layer 2: base image, desaturated and moody */}
       <div
-        className="absolute inset-0 z-10 bg-cover bg-center bg-no-repeat opacity-40 grayscale"
+        className="absolute inset-0 z-10 bg-cover bg-top bg-no-repeat opacity-40 grayscale"
         style={{ backgroundImage: `url(${HERO_IMAGE})` }}
       />
 
@@ -132,7 +132,7 @@ const SpotlightHero = () => {
         style={{ maskRepeat: 'no-repeat', WebkitMaskRepeat: 'no-repeat' }}
       >
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat"
           style={{ backgroundImage: `url(${HERO_IMAGE})` }}
         />
         <div className="absolute inset-0 bg-portfolio-accent/10" />
