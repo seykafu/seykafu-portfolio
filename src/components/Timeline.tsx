@@ -37,7 +37,7 @@ const Timeline = () => {
     { year: '2023', title: 'Microsoft, Planview', active: true },
     { year: '2024', title: 'Planview', active: true },
     { year: '2025', title: 'Unbounce', active: true },
-    { year: '2026', title: 'Disco, Present', active: true },
+    { year: '2026', title: 'Disco', active: true },
   ];
 
   return (

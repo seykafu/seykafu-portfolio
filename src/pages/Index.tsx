@@ -33,21 +33,43 @@ const Index = () => {
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-portfolio-text/80 animate-on-load">
                 Hello! My name is Kasey, and I'm a product manager, author, and
-                community builder based in Vancouver. By day, I'm an AI product
-                manager at Disco, building AI-native learning experiences.
-                Before that, I shipped AI and platform products at Unbounce,
-                Planview, and Microsoft.
+                community builder based in Vancouver. I was recently an AI
+                product manager at{' '}
+                <a href="https://disco.co" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent underline decoration-portfolio-accent/40 underline-offset-4 transition-colors hover:decoration-portfolio-accent">
+                  Disco
+                </a>
+                , building AI-native learning experiences. Before that, I
+                shipped AI and platform products at{' '}
+                <a href="https://unbounce.com" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent underline decoration-portfolio-accent/40 underline-offset-4 transition-colors hover:decoration-portfolio-accent">
+                  Unbounce
+                </a>
+                ,{' '}
+                <a href="https://planview.com/ai" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent underline decoration-portfolio-accent/40 underline-offset-4 transition-colors hover:decoration-portfolio-accent">
+                  Planview
+                </a>
+                , and Microsoft.
               </p>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-portfolio-text/80 animate-on-load">
                 By night, I write. I've published fantasy and rom-com novels,
                 short stories, and newsletters, with a non-fiction book on the
                 way. I also co-founded PM Hive, Vancouver's PM community, and I
-                love building side projects like Pencat and Ravage.
+                love building side projects like{' '}
+                <a href="https://pencat.com" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent underline decoration-portfolio-accent/40 underline-offset-4 transition-colors hover:decoration-portfolio-accent">
+                  Pencat
+                </a>{' '}
+                and{' '}
+                <a href="https://ravage.game" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent underline decoration-portfolio-accent/40 underline-offset-4 transition-colors hover:decoration-portfolio-accent">
+                  Ravage
+                </a>
+                .
               </p>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-portfolio-text/80 animate-on-load">
-                For fun, I workout, write blogs, longboard, paint, play guitar,
-                read, host events, and play video games! I also have a small cat
-                named Khione.
+                For fun, I workout,{' '}
+                <a href="https://substack.com/@seykafu" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent underline decoration-portfolio-accent/40 underline-offset-4 transition-colors hover:decoration-portfolio-accent">
+                  write blogs
+                </a>
+                , longboard, paint, play guitar, read, host events, and play
+                video games! I also have a small cat named Khione.
               </p>
             </div>
             <div className="animate-on-load">

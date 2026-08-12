@@ -151,7 +151,7 @@ const SpotlightHero = () => {
             className="liquid-glass flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-white transition-colors hover:text-portfolio-accent"
           >
             <span className="h-2 w-2 rounded-full bg-green-400" />
-            Now: AI PM @ Disco
+            Recently: AI PM @ Disco
           </Link>
           <Link
             to="/career-support"
