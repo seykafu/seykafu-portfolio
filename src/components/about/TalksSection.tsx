@@ -4,7 +4,7 @@ import { Calendar } from 'lucide-react';
 
 const TalksSection = () => {
   return (
-    <section className="py-16">
+    <section className="py-10">
       <div className="flex items-center mb-8">
         <Calendar className="text-portfolio-accent mr-3" />
         <h2 className="font-serif text-3xl font-semibold">Talks / Press / Media</h2>

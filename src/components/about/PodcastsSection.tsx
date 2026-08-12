@@ -4,7 +4,7 @@ import { FileText } from 'lucide-react';
 
 const PodcastsSection = () => {
   return (
-    <section className="py-16">
+    <section className="py-10">
       <div className="flex items-center mb-8">
         <FileText className="text-portfolio-accent mr-3" />
         <h2 className="font-serif text-3xl font-semibold">My Podcasts</h2>

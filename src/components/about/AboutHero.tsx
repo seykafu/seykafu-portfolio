@@ -3,7 +3,7 @@ import React from 'react';
 
 const AboutHero = () => {
   return (
-    <section className="py-16">
+    <section className="py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">About Me</h1>
@@ -14,7 +14,7 @@ const AboutHero = () => {
             <div>
               <h2 className="text-xl font-bold mb-2">My main focus</h2>
               <p className="text-lg text-portfolio-text/80">
-                I identify as both a product leader and a writer. I helped improve <a href="https://bing.com" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Bing Search</a> marketshare back at Microsoft and now I'm building Planview's flagship AI product, <a href="https://planview.com/ai" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Planview Copilot</a>. I run both the <a href="https://pmhive.blog" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">PM Hive Newsletter</a> as well as other productivity blogs on <a href="https://medium.com/@seykafu" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Medium</a>.
+                I identify as both a product leader and a writer. I was recently an AI product manager at <a href="https://disco.co" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Disco</a>. Before that, I led <a href="https://unbounce.com" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Unbounce</a>'s Insightly AI Copilot, built <a href="https://planview.com/ai" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Planview Copilot</a>, and helped improve <a href="https://bing.com" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Bing Search</a> marketshare at Microsoft. I run both the <a href="https://pmhive.blog" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">PM Hive Newsletter</a> as well as other productivity blogs on <a href="https://medium.com/@seykafu" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Medium</a>.
               </p>
             </div>
             <div>
