@@ -13,7 +13,7 @@ const CommunityWork = () => {
             <div>
               <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Community Work</h1>
               <p className="text-lg text-portfolio-text/80 mb-8">
-                As a passionate community builder, I co-founded PM Hive - Vancouver's premier Product Management community - back in 2023. I'm also a co-organizer of Vancouver Tech Week, bringing together tech professionals from across the region to connect, learn, and grow together.
+                As a passionate community builder, I co-founded PM Hive, Vancouver's premier Product Management community, back in 2023. I'm also a co-organizer of Vancouver Tech Week, bringing together tech professionals from across the region to connect, learn, and grow together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild className="bg-portfolio-accent hover:bg-portfolio-accent-light text-black">

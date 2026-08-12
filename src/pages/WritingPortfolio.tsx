@@ -46,7 +46,7 @@ const nonFictionPages: FlipPage[] = [
   {
     title: "My Substack Newsletter",
     year: "2020-Present",
-    description: "PM Hive - A collection of articles covering product management, tech, productivity, and career advice published regularly on Substack.",
+    description: "PM Hive, a collection of articles covering product management, tech, productivity, and career advice published regularly on Substack.",
     coverImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643",
     link: "https://seykafu.substack.com/"
   },
@@ -80,16 +80,16 @@ const WritingPortfolio = () => {
               </span>
             </div>
 
-            <h1 className="animate-fade-up-delay-1 mt-6 font-display uppercase leading-[0.92] tracking-tight">
-              <span className="block text-[clamp(2.5rem,4.5vw,4.8rem)]">Read.</span>
-              <span className="block text-[clamp(2.5rem,4.5vw,4.8rem)] italic text-portfolio-accent">
-                Write.
+            <h1 className="animate-fade-up-delay-1 mt-6 font-display leading-[1.05] tracking-tight">
+              <span className="block text-[clamp(1.7rem,2.9vw,2.9rem)]">Darkness Me, Colorful You</span>
+              <span className="block text-[clamp(1.7rem,2.9vw,2.9rem)] italic text-portfolio-accent">
+                Dare to Dream
               </span>
-              <span className="block text-[clamp(2.5rem,4.5vw,4.8rem)]">Repeat.</span>
+              <span className="block text-[clamp(1.7rem,2.9vw,2.9rem)]">PM Hive Newsletter</span>
             </h1>
 
             <p className="animate-fade-up-delay-2 mt-6 max-w-md text-sm leading-relaxed text-portfolio-text/70 sm:text-base">
-              Novels, short stories, and newsletters — fiction that chases wonder,
+              Novels, short stories, and newsletters. Fiction that chases wonder,
               and non-fiction that helps PMs <span className="font-bold text-portfolio-text">dream bigger.</span>
             </p>
 

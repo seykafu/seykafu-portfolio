@@ -15,7 +15,7 @@ const workProducts: ProductItem[] = [
   {
     company: "Disco",
     year: "2026",
-    description: "Product Manager at Disco, the AI-first social learning platform powering cohort-based programs, academies, and professional communities worldwide. Building AI-native learning experiences — from AI agents and curriculum generation to community and learning operations.",
+    description: "Product Manager at Disco, the AI-first social learning platform powering cohort-based programs, academies, and professional communities worldwide. Building AI-native learning experiences, from AI agents and curriculum generation to community and learning operations.",
     image: "/lovable-uploads/disco-platform.webp",
     link: "https://www.disco.co/"
   },
@@ -94,7 +94,7 @@ const personalProducts: ProductItem[] = [
   {
     company: "Ravage",
     year: "Live",
-    description: "Ravage is a browser-based tactical RPG that interweaves strategic combat with a visual-novel narrative — twenty-one characters, a thirty-battle campaign, and seven distinct endings shaped by your tactical choices.",
+    description: "Ravage is a browser-based tactical RPG that interweaves strategic combat with a visual-novel narrative, with twenty-one characters, a thirty-battle campaign, and seven distinct endings shaped by your tactical choices.",
     image: "https://ravage.game/assets/backdrops/palaceCoup.png",
     link: "https://ravage.game",
     linkLabel: "Play Ravage →"
@@ -199,7 +199,7 @@ const ProductPortfolio = () => {
             <span className="hidden sm:block h-[1px] flex-1 bg-portfolio-muted/60" />
           </h2>
           <p className="text-lg text-portfolio-text/80 max-w-3xl mb-10">
-            Products I've built and shipped on my own time — side projects turned real things people use.
+            Products I've built and shipped on my own time. Side projects turned into real things people use.
           </p>
           <ProductList products={personalProducts} />
 
