@@ -69,64 +69,67 @@ const WritingPortfolio = () => {
   return (
     <Layout>
       <div className="container mx-auto px-4 md:px-6">
-        {/* Hero header */}
-        <section className="pb-4 pt-12 md:pt-16">
-          <div className="animate-fade-up flex items-center gap-2 text-portfolio-text/60">
-            <Feather className="h-4 w-4" />
-            <span className="text-xs uppercase tracking-[0.3em] sm:text-sm">
-              Writing Portfolio
-            </span>
+        {/* Header + book, side by side on desktop */}
+        <section className="grid grid-cols-1 items-center gap-12 py-8 md:py-10 lg:grid-cols-[5fr_7fr] lg:gap-16 lg:min-h-[calc(100vh-10rem)]">
+          {/* Left: header */}
+          <div>
+            <div className="animate-fade-up flex items-center gap-2 text-portfolio-text/60">
+              <Feather className="h-4 w-4" />
+              <span className="text-xs uppercase tracking-[0.3em] sm:text-sm">
+                Writing Portfolio
+              </span>
+            </div>
+
+            <h1 className="animate-fade-up-delay-1 mt-6 font-display uppercase leading-[0.92] tracking-tight">
+              <span className="block text-[clamp(2.5rem,4.5vw,4.8rem)]">Read.</span>
+              <span className="block text-[clamp(2.5rem,4.5vw,4.8rem)] italic text-portfolio-accent">
+                Write.
+              </span>
+              <span className="block text-[clamp(2.5rem,4.5vw,4.8rem)]">Repeat.</span>
+            </h1>
+
+            <p className="animate-fade-up-delay-2 mt-6 max-w-md text-sm leading-relaxed text-portfolio-text/70 sm:text-base">
+              Novels, short stories, and newsletters — fiction that chases wonder,
+              and non-fiction that helps PMs <span className="font-bold text-portfolio-text">dream bigger.</span>
+            </p>
+
+            <div className="animate-fade-up-delay-3 mt-8 flex flex-wrap gap-6 sm:gap-10 lg:mt-10">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <div className="text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
+                    {stat.value}
+                  </div>
+                  <div className="mt-1 text-[9px] uppercase tracking-widest text-portfolio-text/50 sm:text-xs">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <h1 className="animate-fade-up-delay-1 mt-6 font-display uppercase leading-[0.92] tracking-tight lg:mt-8">
-            <span className="block text-[clamp(2.8rem,8vw,7rem)]">Read.</span>
-            <span className="block text-[clamp(2.8rem,8vw,7rem)] italic text-portfolio-accent">
-              Write.
-            </span>
-            <span className="block text-[clamp(2.8rem,8vw,7rem)]">Repeat.</span>
-          </h1>
+          {/* Right: the book */}
+          <div className="animate-fade-up-delay-2 w-full">
+            <Tabs defaultValue="fiction" className="w-full">
+              <TabsList className="mb-6 grid w-full max-w-md mx-auto grid-cols-2">
+                <TabsTrigger value="fiction" className="flex items-center gap-2">
+                  <BookOpen className="h-4 w-4" />
+                  <span>Fiction</span>
+                </TabsTrigger>
+                <TabsTrigger value="non-fiction" className="flex items-center gap-2">
+                  <FileText className="h-4 w-4" />
+                  <span>Non-Fiction</span>
+                </TabsTrigger>
+              </TabsList>
 
-          <p className="animate-fade-up-delay-2 mt-6 max-w-md text-sm leading-relaxed text-portfolio-text/70 sm:text-base lg:mt-8">
-            Novels, short stories, and newsletters — fiction that chases wonder,
-            and non-fiction that helps PMs <span className="font-bold text-portfolio-text">dream bigger.</span>
-          </p>
+              <TabsContent value="fiction" className="focus-visible:outline-none mt-2">
+                <FlipBook pages={fictionPages} />
+              </TabsContent>
 
-          <div className="animate-fade-up-delay-3 mt-8 flex flex-wrap gap-6 sm:mt-10 sm:gap-12 lg:mt-14 lg:gap-16">
-            {stats.map((stat) => (
-              <div key={stat.label}>
-                <div className="text-2xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-                  {stat.value}
-                </div>
-                <div className="mt-1 text-[9px] uppercase tracking-widest text-portfolio-text/50 sm:text-xs">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
+              <TabsContent value="non-fiction" className="focus-visible:outline-none mt-2">
+                <FlipBook pages={nonFictionPages} />
+              </TabsContent>
+            </Tabs>
           </div>
-        </section>
-
-        {/* The book */}
-        <section className="py-16">
-          <Tabs defaultValue="fiction" className="w-full max-w-4xl mx-auto">
-            <TabsList className="animate-fade-up-delay-4 grid w-full max-w-md mx-auto grid-cols-2 mb-12">
-              <TabsTrigger value="fiction" className="flex items-center gap-2">
-                <BookOpen className="h-4 w-4" />
-                <span>Fiction</span>
-              </TabsTrigger>
-              <TabsTrigger value="non-fiction" className="flex items-center gap-2">
-                <FileText className="h-4 w-4" />
-                <span>Non-Fiction</span>
-              </TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="fiction" className="focus-visible:outline-none mt-2">
-              <FlipBook pages={fictionPages} />
-            </TabsContent>
-
-            <TabsContent value="non-fiction" className="focus-visible:outline-none mt-2">
-              <FlipBook pages={nonFictionPages} />
-            </TabsContent>
-          </Tabs>
         </section>
       </div>
     </Layout>

@@ -213,7 +213,7 @@ const FlipBook = ({ pages }: FlipBookProps) => {
       </div>
 
       {/* controls */}
-      <div className="mt-10 flex items-center justify-between">
+      <div className="mt-6 flex items-center justify-between">
         <button
           onClick={() => goTo(current - 1)}
           disabled={current === 0 || !!flip}
