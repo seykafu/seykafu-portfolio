@@ -2,7 +2,7 @@
 import React from 'react';
 import CustomCursor from './CustomCursor';
 import Navbar from './Navbar';
-import { Github, Linkedin, Twitter, BookOpen } from 'lucide-react';
+import { Github, Linkedin, Twitter, BookOpen, Compass } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface LayoutProps {
@@ -24,6 +24,10 @@ const Layout = ({ children, fullBleed = false }: LayoutProps) => {
             <p className="text-sm">© {new Date().getFullYear()} Kasey. All rights reserved.</p>
           </div>
           <div className="flex space-x-4">
+            <Link to="/career-support" className="text-portfolio-text/60 hover:text-portfolio-accent transition-colors flex items-center gap-1">
+              <Compass className="w-4 h-4" />
+              <span>Career Support</span>
+            </Link>
             <Link to="/journal" className="text-portfolio-text/60 hover:text-portfolio-accent transition-colors flex items-center gap-1">
               <BookOpen className="w-4 h-4" />
               <span>My Journal</span>

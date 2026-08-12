@@ -59,15 +59,6 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
-          <Link
-            to="/career-support"
-            className="liquid-glass pointer-events-auto hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white md:flex"
-          >
-            <span className="h-2 w-2 rounded-full bg-green-400" />
-            Career Support
-          </Link>
-
           {/* Mobile hamburger */}
           <button
             className="liquid-glass pointer-events-auto flex flex-col items-center justify-center gap-[5px] rounded-full px-4 py-3.5 md:hidden"
