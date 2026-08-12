@@ -17,7 +17,7 @@ const CareerSection = () => {
             <p className="text-lg text-portfolio-text/80 mt-2">
               Product Manager at Disco, the AI-first social learning platform powering
               cohort-based programs, academies, and professional communities worldwide,
-              building AI-native learning experiences.
+              where I built AI-native learning experiences.
             </p>
           </div>
         </div>

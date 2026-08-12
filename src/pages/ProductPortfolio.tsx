@@ -15,7 +15,7 @@ const workProducts: ProductItem[] = [
   {
     company: "Disco",
     year: "2026",
-    description: "Product Manager at Disco, the AI-first social learning platform powering cohort-based programs, academies, and professional communities worldwide. Building AI-native learning experiences, from AI agents and curriculum generation to community and learning operations.",
+    description: "Product Manager at Disco, the AI-first social learning platform powering cohort-based programs, academies, and professional communities worldwide. Built AI-native learning experiences, from AI agents and curriculum generation to community and learning operations.",
     image: "/lovable-uploads/disco-platform.webp",
     link: "https://www.disco.co/"
   },
