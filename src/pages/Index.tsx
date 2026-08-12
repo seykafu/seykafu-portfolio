@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout';
 import SpotlightHero from '../components/SpotlightHero';
+import GreetingCycle from '../components/GreetingCycle';
 
 const Index = () => {
   useEffect(() => {
@@ -28,13 +29,14 @@ const Index = () => {
           <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
             <div>
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl animate-on-load">
-                <span className="text-portfolio-accent italic">Hello,</span> I'm Kasey
+                <GreetingCycle className="italic text-portfolio-accent" />
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-portfolio-text/80 animate-on-load">
-                I'm a product manager, author, and community builder based in
-                Vancouver. By day, I'm an AI product manager at Disco, building
-                AI-native learning experiences. Before that, I shipped AI and
-                platform products at Unbounce, Planview, and Microsoft.
+                Hello! My name is Kasey, and I'm a product manager, author, and
+                community builder based in Vancouver. By day, I'm an AI product
+                manager at Disco, building AI-native learning experiences.
+                Before that, I shipped AI and platform products at Unbounce,
+                Planview, and Microsoft.
               </p>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-portfolio-text/80 animate-on-load">
                 By night, I write. I've published fantasy and rom-com novels,

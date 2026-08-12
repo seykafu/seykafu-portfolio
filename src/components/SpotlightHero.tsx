@@ -1,10 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const HERO_IMAGE = '/lovable-uploads/marathon-hero.webp';
 const SPOT_RADIUS = 280;
-const GREETINGS = ['Bello', 'Bonjour', '你好'];
-const GREETING_CYCLE_MS = 2800;
 
 const marqueeItems = [
   'Product Manager',
@@ -21,16 +19,6 @@ const SpotlightHero = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const revealRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
-  const [greetIndex, setGreetIndex] = useState(0);
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const id = setInterval(
-      () => setGreetIndex((i) => (i + 1) % GREETINGS.length),
-      GREETING_CYCLE_MS
-    );
-    return () => clearInterval(id);
-  }, []);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -101,14 +89,11 @@ const SpotlightHero = () => {
         Kasey Fu · Product · Writing · Community
       </p>
       <h1
-        className={`font-display leading-[0.9] text-[4rem] xs:text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[13rem] ${
+        className={`animate-fade-up mx-auto max-w-5xl font-display leading-[0.95] text-[clamp(2.75rem,7.5vw,6.75rem)] ${
           italic ? 'italic text-portfolio-accent' : 'text-white'
         }`}
       >
-        <span className="sr-only">Kasey Fu</span>
-        <span key={greetIndex} aria-hidden="true" className="animate-greeting inline-block">
-          {GREETINGS[greetIndex]}
-        </span>
+        Welcome to my site
       </h1>
     </div>
   );
@@ -157,10 +142,8 @@ const SpotlightHero = () => {
 
       {/* Foreground content */}
       <div className="absolute inset-x-0 bottom-24 z-50 flex flex-col items-center gap-6 px-6 text-center">
-        <p className="max-w-xl text-sm sm:text-base leading-relaxed text-white/70">
-          I build AI products, write books, and build communities wherever I go.
-          Product manager at Disco, published author, and co-founder of PM Hive,
-          Vancouver's product community.
+        <p className="animate-fade-up-delay-1 max-w-xl text-sm sm:text-base leading-relaxed text-white/70">
+          Scroll down to learn more!
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Link
