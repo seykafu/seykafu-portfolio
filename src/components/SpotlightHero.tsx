@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-const HERO_IMAGE = '/lovable-uploads/08661f08-9e2e-4316-8b0f-e593eee47af0.png';
+const HERO_IMAGE = '/lovable-uploads/marathon-hero.webp';
 const SPOT_RADIUS = 280;
 
 const marqueeItems = [
