@@ -7,14 +7,15 @@ import { Link } from 'react-router-dom';
 
 interface LayoutProps {
   children: React.ReactNode;
+  fullBleed?: boolean;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, fullBleed = false }: LayoutProps) => {
   return (
     <div className="min-h-screen bg-portfolio-bg text-portfolio-text custom-cursor-none">
       <CustomCursor />
       <Navbar />
-      <main className="pt-20">
+      <main className={fullBleed ? '' : 'pt-20'}>
         {children}
       </main>
       <footer className="container mx-auto px-6 py-8 mt-20 border-t border-portfolio-muted/30 text-portfolio-text/60">

@@ -23,6 +23,9 @@ export default {
       }
     },
     extend: {
+      screens: {
+        'xs': '480px',
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -123,6 +126,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         serif: ['"Playfair Display"', 'serif'],
+        display: ['"Instrument Serif"', 'serif'],
       }
     }
   },

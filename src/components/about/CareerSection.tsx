@@ -11,6 +11,29 @@ const CareerSection = () => {
       </div>
       <div className="space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
+          <div className="font-medium text-portfolio-accent">2026</div>
+          <div>
+            <h3 className="text-xl font-bold">Disco</h3>
+            <p className="text-lg text-portfolio-text/80 mt-2">
+              Product Manager at Disco, the AI-first social learning platform powering
+              cohort-based programs, academies, and professional communities worldwide —
+              building AI-native learning experiences.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
+          <div className="font-medium text-portfolio-accent">2025 - 2026</div>
+          <div>
+            <h3 className="text-xl font-bold">Unbounce</h3>
+            <p className="text-lg text-portfolio-text/80 mt-2">
+              Lead PM for Insightly CRM and Insightly AI Copilot, scaling growth
+              from 10k mid-market and small business users to 100k.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4">
           <div className="font-medium text-portfolio-accent">2023 - 2025</div>
           <div>
             <h3 className="text-xl font-bold">Planview</h3>

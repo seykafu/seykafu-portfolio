@@ -8,13 +8,21 @@ interface ProductItem {
   image: string;
   video?: string;
   link?: string;
+  linkLabel?: string;
 }
 
 const ProductPortfolio = () => {
   const products: ProductItem[] = [
     {
+      company: "Disco",
+      year: "2026",
+      description: "Product Manager at Disco, the AI-first social learning platform powering cohort-based programs, academies, and professional communities worldwide. Building AI-native learning experiences — from AI agents and curriculum generation to community and learning operations.",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+      link: "https://www.disco.co/"
+    },
+    {
       company: "Unbounce",
-      year: "2025-Present",
+      year: "2025-2026",
       description: "The Lead PM for Insightly CRM and Insightly AI Copilot, scaling growth from 10k mid-market and small business users to 100k.",
       image: "/lovable-uploads/72c58629-f443-42c4-9487-b1aec188fa27.png"
     },
@@ -36,7 +44,8 @@ const ProductPortfolio = () => {
       year: "2021-2024",
       description: "I've developed or produced indie games before! I've developed a visual novel game that leverages AI for character conversations, and produced a 3D maze-runner survival game based on Unreal Engine.",
       image: "https://images.unsplash.com/photo-1511512578047-dfb367046420",
-      link: "https://seykafu.itch.io/"
+      link: "https://seykafu.itch.io/",
+      linkLabel: "View games →"
     },
     {
       company: "Unity",
@@ -149,7 +158,7 @@ const ProductPortfolio = () => {
                         rel="noopener noreferrer"
                         className="inline-block text-portfolio-accent hover:text-portfolio-accent-light mt-2"
                       >
-                        View games →
+                        {product.linkLabel ?? 'Learn more →'}
                       </a>
                     )}
                   </div>
