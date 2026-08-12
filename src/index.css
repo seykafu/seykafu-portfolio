@@ -134,6 +134,59 @@
   animation: scroll-cue 2s ease-in-out infinite;
 }
 
+/* ===== Facelift: staggered fade-up entrances ===== */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { opacity: 0; animation: fade-up 0.8s ease-out forwards; }
+.animate-fade-up-delay-1 { opacity: 0; animation: fade-up 0.8s ease-out 0.2s forwards; }
+.animate-fade-up-delay-2 { opacity: 0; animation: fade-up 0.8s ease-out 0.4s forwards; }
+.animate-fade-up-delay-3 { opacity: 0; animation: fade-up 0.8s ease-out 0.6s forwards; }
+.animate-fade-up-delay-4 { opacity: 0; animation: fade-up 0.8s ease-out 0.8s forwards; }
+
+/* ===== FlipBook: real 3D page turns ===== */
+@keyframes page-turn-next {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(-180deg); }
+}
+@keyframes page-turn-prev {
+  from { transform: rotateY(-180deg); }
+  to { transform: rotateY(0deg); }
+}
+.animate-page-turn-next {
+  animation: page-turn-next 0.9s cubic-bezier(0.35, 0.06, 0.2, 0.96) forwards;
+}
+.animate-page-turn-prev {
+  animation: page-turn-prev 0.9s cubic-bezier(0.35, 0.06, 0.2, 0.96) forwards;
+}
+@keyframes page-turn-shade {
+  0% { opacity: 0; }
+  50% { opacity: 0.28; }
+  100% { opacity: 0; }
+}
+.animate-page-turn-shade {
+  animation: page-turn-shade 0.9s ease-in-out forwards;
+}
+@keyframes book-page-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-book-page-in {
+  animation: book-page-in 0.35s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-up-delay-1,
+  .animate-fade-up-delay-2,
+  .animate-fade-up-delay-3,
+  .animate-fade-up-delay-4 {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 ::selection {
   background: #E5B1A5;
   color: #0F0F12;
