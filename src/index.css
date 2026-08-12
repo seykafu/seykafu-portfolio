@@ -126,6 +126,16 @@
   animation: menu-close-in 0.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
 }
 
+@keyframes greeting-cycle {
+  0% { opacity: 0; filter: blur(14px); transform: translateY(12px) scale(0.96); }
+  14% { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+  80% { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+  100% { opacity: 0; filter: blur(10px); transform: translateY(-10px) scale(1.03); }
+}
+.animate-greeting {
+  animation: greeting-cycle 2.8s ease-in-out forwards;
+}
+
 @keyframes scroll-cue {
   0%, 100% { transform: translateY(0); opacity: 0.7; }
   50% { transform: translateY(6px); opacity: 0.3; }
@@ -196,6 +206,10 @@
   .animate-marquee,
   .animate-scroll-cue {
     animation: none;
+  }
+  .animate-greeting {
+    animation: none;
+    opacity: 1;
   }
 }
 

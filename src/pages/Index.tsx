@@ -31,11 +31,21 @@ const Index = () => {
                 <span className="text-portfolio-accent italic">Hello,</span> I'm Kasey
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-portfolio-text/80 animate-on-load">
-                I'm a product manager, author, and community builder. I'm the
-                co-founder of PM Hive, Vancouver's PM community. For fun, I
-                workout, write blogs, longboard, paint, play guitar, read, host
-                events, and play video games! I also have a small cat named
-                Khione.
+                I'm a product manager, author, and community builder based in
+                Vancouver. By day, I'm an AI product manager at Disco, building
+                AI-native learning experiences. Before that, I shipped AI and
+                platform products at Unbounce, Planview, and Microsoft.
+              </p>
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-portfolio-text/80 animate-on-load">
+                By night, I write. I've published fantasy and rom-com novels,
+                short stories, and newsletters, with a non-fiction book on the
+                way. I also co-founded PM Hive, Vancouver's PM community, and I
+                love building side projects like Pencat and Ravage.
+              </p>
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-portfolio-text/80 animate-on-load">
+                For fun, I workout, write blogs, longboard, paint, play guitar,
+                read, host events, and play video games! I also have a small cat
+                named Khione.
               </p>
             </div>
             <div className="animate-on-load">

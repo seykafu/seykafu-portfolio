@@ -1,8 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const HERO_IMAGE = '/lovable-uploads/marathon-hero.webp';
 const SPOT_RADIUS = 280;
+const GREETINGS = ['Bello', 'Bonjour', '你好'];
+const GREETING_CYCLE_MS = 2800;
 
 const marqueeItems = [
   'Product Manager',
@@ -19,6 +21,16 @@ const SpotlightHero = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const revealRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
+  const [greetIndex, setGreetIndex] = useState(0);
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const id = setInterval(
+      () => setGreetIndex((i) => (i + 1) % GREETINGS.length),
+      GREETING_CYCLE_MS
+    );
+    return () => clearInterval(id);
+  }, []);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -86,14 +98,17 @@ const SpotlightHero = () => {
   const heading = (italic: boolean) => (
     <div className="absolute inset-x-0 top-24 sm:top-28 md:top-32 px-4 text-center select-none">
       <p className="mb-4 text-[0.65rem] xs:text-xs uppercase tracking-[0.35em] text-white/50">
-        Product · Writing · Community
+        Kasey Fu · Product · Writing · Community
       </p>
       <h1
-        className={`font-display uppercase leading-[0.9] text-[4.5rem] xs:text-[5.5rem] sm:text-[9rem] md:text-[12rem] lg:text-[15rem] ${
+        className={`font-display leading-[0.9] text-[4rem] xs:text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[13rem] ${
           italic ? 'italic text-portfolio-accent' : 'text-white'
         }`}
       >
-        Kasey
+        <span className="sr-only">Kasey Fu</span>
+        <span key={greetIndex} aria-hidden="true" className="animate-greeting inline-block">
+          {GREETINGS[greetIndex]}
+        </span>
       </h1>
     </div>
   );
@@ -143,8 +158,9 @@ const SpotlightHero = () => {
       {/* Foreground content */}
       <div className="absolute inset-x-0 bottom-24 z-50 flex flex-col items-center gap-6 px-6 text-center">
         <p className="max-w-xl text-sm sm:text-base leading-relaxed text-white/70">
-          I build AI products by day and write books by night — product manager,
-          author, and co-founder of PM Hive, Vancouver's product community.
+          I build AI products, write books, and build communities wherever I go.
+          Product manager at Disco, published author, and co-founder of PM Hive,
+          Vancouver's product community.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Link
