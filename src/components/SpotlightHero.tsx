@@ -83,14 +83,14 @@ const SpotlightHero = () => {
     };
   }, []);
 
-  const heading = (italic: boolean) => (
+  const heading = (accent: boolean) => (
     <div className="absolute inset-x-0 top-24 sm:top-28 md:top-32 px-4 text-center select-none">
       <p className="mb-4 text-[0.65rem] xs:text-xs uppercase tracking-[0.35em] text-white/50">
         Kasey Fu · Product · Writing · Community
       </p>
       <h1
         className={`animate-fade-up mx-auto max-w-5xl font-display leading-[0.95] text-[clamp(2.75rem,7.5vw,6.75rem)] ${
-          italic ? 'italic text-portfolio-accent' : 'text-white'
+          accent ? 'text-portfolio-accent' : 'text-white'
         }`}
       >
         Welcome to my site
@@ -125,7 +125,7 @@ const SpotlightHero = () => {
       {/* Layer 4: hero heading (base, white) */}
       <div className="pointer-events-none absolute inset-0 z-30">{heading(false)}</div>
 
-      {/* Layer 5: spotlight reveal — full-colour image + accent italic heading */}
+      {/* Layer 5: spotlight reveal — full-colour image + accent heading */}
       <div
         ref={revealRef}
         className="pointer-events-none absolute inset-0 z-40"
