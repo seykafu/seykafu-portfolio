@@ -42,21 +42,23 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop pill nav */}
-          <nav className="liquid-glass pointer-events-auto absolute left-1/2 top-4 hidden -translate-x-1/2 items-center gap-1 rounded-full p-1.5 md:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={cn(
-                  'rounded-full px-4 py-2 text-sm font-medium transition-colors',
-                  location.pathname === link.to
-                    ? 'bg-white/10 text-white'
-                    : 'text-white/70 hover:text-white'
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="pointer-events-auto absolute left-1/2 top-4 hidden -translate-x-1/2 md:block">
+            <div className="liquid-glass flex items-center gap-1 rounded-full p-1.5">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className={cn(
+                    'rounded-full px-4 py-2 text-sm font-medium transition-colors',
+                    location.pathname === link.to
+                      ? 'bg-white/10 text-white'
+                      : 'text-white/70 hover:text-white'
+                  )}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </nav>
 
           {/* Mobile hamburger */}
