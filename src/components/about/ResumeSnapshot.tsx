@@ -104,7 +104,8 @@ const ResumeSnapshot = () => {
           <CardLabel icon={Rocket}>Side Projects</CardLabel>
           <p className="text-sm leading-relaxed text-portfolio-text/80">
             <a href="https://pencat.com" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Pencat</a> storybooks,{' '}
-            <a href="https://ravage.game" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Ravage</a> the tactical RPG,
+            <a href="https://ravage.game" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Ravage</a> the tactical RPG,{' '}
+            <a href="https://trialerror.blog" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent hover:underline">Trial & Error</a> travel blog,
             and a handful of indie games.
           </p>
         </div>

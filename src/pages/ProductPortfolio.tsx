@@ -97,9 +97,17 @@ const personalProducts: ProductItem[] = [
     company: "Ravage",
     year: "Live",
     description: "Ravage is a browser-based tactical RPG that interweaves strategic combat with a visual-novel narrative, with twenty-one characters, a thirty-battle campaign, and seven distinct endings shaped by your tactical choices.",
-    image: "https://ravage.game/assets/backdrops/palaceCoup.png",
+    image: "/lovable-uploads/ravage-cover.webp",
     link: "https://ravage.game",
     linkLabel: "Play Ravage →"
+  },
+  {
+    company: "Trial & Error",
+    year: "Live",
+    description: "Trial & Error is my travel blog, a travel journal of happy accidents. It skips the polished tourist narrative in favour of the wrong turns and happy accidents that make a trip memorable, distilled into curated city guides across 24 cities in 10 countries, each with our top 5 eats, top 5 local experiences, and top 5 places for photos.",
+    image: "/lovable-uploads/trial-error-blog.png",
+    link: "https://trialerror.blog",
+    linkLabel: "Visit Trial & Error →"
   },
   {
     company: "Indie Games",
