@@ -61,6 +61,10 @@ const Index = () => {
                 <a href="https://ravage.game" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent underline decoration-portfolio-accent/40 underline-offset-4 transition-colors hover:decoration-portfolio-accent">
                   Ravage
                 </a>
+                , the latter published under my storytelling games studio,{' '}
+                <a href="https://pencatgames.com" target="_blank" rel="noopener noreferrer" className="text-portfolio-accent underline decoration-portfolio-accent/40 underline-offset-4 transition-colors hover:decoration-portfolio-accent">
+                  Pencat Games
+                </a>
                 .
               </p>
               <p className="mt-4 max-w-xl text-lg leading-relaxed text-portfolio-text/80 animate-on-load">

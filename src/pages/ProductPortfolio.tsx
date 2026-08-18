@@ -94,9 +94,17 @@ const personalProducts: ProductItem[] = [
     linkLabel: "Visit Pencat →"
   },
   {
+    company: "Pencat Games",
+    year: "Live",
+    description: "Pencat Games is my storytelling games publisher, the home for narrative-first titles like Ravage, a tactical RPG, and Khione, a cozy island adventure starring a little cat. Every release starts with a story worth telling and builds the play around it.",
+    image: "/lovable-uploads/pencat-games.png",
+    link: "https://pencatgames.com",
+    linkLabel: "Visit Pencat Games →"
+  },
+  {
     company: "Ravage",
     year: "Live",
-    description: "Ravage is a browser-based tactical RPG that interweaves strategic combat with a visual-novel narrative, with twenty-one characters, a thirty-battle campaign, and seven distinct endings shaped by your tactical choices.",
+    description: "Ravage is a browser-based tactical RPG published under Pencat Games that interweaves strategic combat with a visual-novel narrative, with twenty-one characters, a thirty-battle campaign, and seven distinct endings shaped by your tactical choices.",
     image: "/lovable-uploads/ravage-cover.webp",
     link: "https://ravage.game",
     linkLabel: "Play Ravage →"
@@ -131,25 +139,27 @@ const ProductList = ({ products }: { products: ProductItem[] }) => (
           <div className="relative group">
             {product.video ? (
               <div className="w-full" dangerouslySetInnerHTML={{ __html: product.video }} />
+            ) : product.link ? (
+              <a
+                href={product.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block aspect-[16/10] overflow-hidden rounded-lg bg-portfolio-muted/30"
+              >
+                <img
+                  src={product.image}
+                  alt={product.company}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </a>
             ) : (
-              <>
-                <div className="absolute inset-0 bg-portfolio-accent/20 group-hover:bg-portfolio-accent/10 transition-colors rounded-lg"></div>
-                {product.link ? (
-                  <a href={product.link} target="_blank" rel="noopener noreferrer">
-                    <img
-                      src={product.image}
-                      alt={product.company}
-                      className="w-full h-48 md:h-60 object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity"
-                    />
-                  </a>
-                ) : (
-                  <img
-                    src={product.image}
-                    alt={product.company}
-                    className="w-full h-48 md:h-60 object-cover rounded-lg"
-                  />
-                )}
-              </>
+              <div className="aspect-[16/10] overflow-hidden rounded-lg bg-portfolio-muted/30">
+                <img
+                  src={product.image}
+                  alt={product.company}
+                  className="h-full w-full object-cover"
+                />
+              </div>
             )}
           </div>
         </div>
