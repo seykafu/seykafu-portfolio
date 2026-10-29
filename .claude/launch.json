@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 8080
+    },
+    {
+      "name": "portfolio-dev-with-api",
+      "runtimeExecutable": "vercel",
+      "runtimeArgs": ["dev", "--listen", "3000", "--yes"],
+      "port": 3000
     }
   ]
 }

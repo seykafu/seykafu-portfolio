@@ -1,78 +1,83 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import { uploadResumeToBackend } from '@/lib/resumeUpload';
+import {
+  submitResume,
+  savePendingSubmission,
+  readPendingSubmission,
+  clearPendingSubmission,
+} from '@/lib/resumeUpload';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Upload, FileText, Coffee, Clock, CheckCircle2 } from 'lucide-react';
+import { Upload, FileText, Coffee, Clock, CheckCircle2, AlertTriangle } from 'lucide-react';
 
 interface PaymentFormProps {
   file: File;
   email: string;
-  onSuccess: () => void;
   onCancel: () => void;
 }
 
-const PaymentForm: React.FC<PaymentFormProps> = ({ file, email, onSuccess, onCancel }) => {
+const PaymentForm: React.FC<PaymentFormProps> = ({ file, email, onCancel }) => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [uploadFailed, setUploadFailed] = useState(false);
 
   // Stripe Payment Link
   // Redirect URLs are automatically appended as query parameters
   // If redirects don't work, configure them in Stripe Dashboard → Payment Links → Settings
   const STRIPE_PAYMENT_LINK = 'https://buy.stripe.com/4gMeVcfDZc8U1K02uhawo01';
 
+  const redirectToStripe = () => {
+    // Use the current origin to ensure we're on the same domain
+    const basePath = window.location.origin.replace(/\/$/, '');
+    const successUrl = `${basePath}/career-support?payment=success`;
+    const cancelUrl = `${basePath}/career-support?payment=canceled`;
+
+    const paymentUrl = new URL(STRIPE_PAYMENT_LINK);
+    paymentUrl.searchParams.set('success_url', encodeURIComponent(successUrl));
+    paymentUrl.searchParams.set('cancel_url', encodeURIComponent(cancelUrl));
+    paymentUrl.searchParams.set('prefilled_email', email);
+    window.location.href = paymentUrl.toString();
+  };
+
   const handlePayment = async () => {
     setIsProcessing(true);
     setError(null);
 
     try {
-      // Store file and email data temporarily for after payment
-      // Convert file to base64 for storage
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const fileData = {
-          name: file.name,
-          size: file.size,
-          type: file.type,
-          data: reader.result as string, // base64 string
-          email: email,
-          timestamp: Date.now(),
-        };
-        
-        // Store in sessionStorage (cleared when browser tab closes)
-        sessionStorage.setItem('pendingResumeSubmission', JSON.stringify(fileData));
-        
-        // Build redirect URLs
-        // Use the current origin to ensure we're on the same domain
-        const baseUrl = window.location.origin;
-        // Remove any trailing slashes and ensure clean path
-        const basePath = baseUrl.replace(/\/$/, '');
-        const successUrl = `${basePath}/career-support?payment=success`;
-        const cancelUrl = `${basePath}/career-support?payment=canceled`;
-        
-        // Redirect to Stripe Payment Link with redirect URLs as query parameters
-        // Stripe Payment Links support success_url and cancel_url parameters
-        const paymentUrl = new URL(STRIPE_PAYMENT_LINK);
-        paymentUrl.searchParams.set('success_url', encodeURIComponent(successUrl));
-        paymentUrl.searchParams.set('cancel_url', encodeURIComponent(cancelUrl));
-        
-        console.log('Redirecting to Stripe with URLs:', { successUrl, cancelUrl });
-        window.location.href = paymentUrl.toString();
-      };
-      
-      reader.onerror = () => {
-        setError('Failed to process file. Please try again.');
-        setIsProcessing(false);
-      };
-      
-      reader.readAsDataURL(file);
+      // Upload the resume and notify Kasey BEFORE redirecting to Stripe,
+      // so the submission is safe even if the redirect back never happens.
+      const result = await submitResume(file, email);
+      savePendingSubmission({
+        email,
+        fileName: file.name,
+        uploaded: true,
+        notified: result.notified,
+        blobUrl: result.blobUrl,
+        timestamp: Date.now(),
+      });
+      redirectToStripe();
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An unexpected error occurred. Please try again.');
+      console.error('Resume upload failed:', err);
+      setUploadFailed(true);
+      setError(
+        "We couldn't upload your resume. Please try again — or continue to payment and email your resume to kaseykungfu@gmail.com afterwards."
+      );
       setIsProcessing(false);
     }
+  };
+
+  const handlePayWithoutUpload = () => {
+    savePendingSubmission({
+      email,
+      fileName: file.name,
+      uploaded: false,
+      notified: false,
+      timestamp: Date.now(),
+    });
+    redirectToStripe();
   };
 
   return (
@@ -103,9 +108,24 @@ const PaymentForm: React.FC<PaymentFormProps> = ({ file, email, onSuccess, onCan
           disabled={isProcessing}
           className="flex-1"
         >
-          {isProcessing ? 'Processing...' : 'Proceed to Payment'}
+          {isProcessing
+            ? 'Uploading resume...'
+            : uploadFailed
+              ? 'Retry Upload & Pay'
+              : 'Proceed to Payment'}
         </Button>
       </div>
+      {uploadFailed && (
+        <Button
+          type="button"
+          variant="ghost"
+          onClick={handlePayWithoutUpload}
+          disabled={isProcessing}
+          className="w-full text-muted-foreground"
+        >
+          Pay anyway — I'll email my resume afterwards
+        </Button>
+      )}
     </div>
   );
 };
@@ -114,63 +134,32 @@ const CareerSupport = () => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [userEmail, setUserEmail] = useState('');
   const [isPaymentDialogOpen, setIsPaymentDialogOpen] = useState(false);
-  const [isUploaded, setIsUploaded] = useState(false);
+  const [paymentComplete, setPaymentComplete] = useState(false);
+  // Whether the resume was actually uploaded before payment — the success
+  // copy must not claim receipt when the upload failed or state was lost.
+  const [resumeReceived, setResumeReceived] = useState(false);
 
   // Handle Stripe Payment Link redirect
   React.useEffect(() => {
-    // Log current location for debugging
-    console.log('CareerSupport page loaded:', {
-      pathname: window.location.pathname,
-      search: window.location.search,
-      fullUrl: window.location.href
-    });
-    
     const urlParams = new URLSearchParams(window.location.search);
     const paymentStatus = urlParams.get('payment');
-    
+
     if (paymentStatus === 'success') {
-      // Retrieve stored file data
-      const storedData = sessionStorage.getItem('pendingResumeSubmission');
-      
-      if (storedData) {
-        const processPaymentSuccess = async () => {
-          try {
-            const fileData = JSON.parse(storedData);
-            
-            // Upload file to backend/storage service
-            const sessionId = urlParams.get('session_id');
-            try {
-              await uploadResumeToBackend(fileData, sessionId || undefined);
-            } catch (uploadError) {
-              console.error('Error uploading resume:', uploadError);
-              // Still show success since payment was completed
-              // You might want to show a warning that upload failed
-            }
-            
-            setIsUploaded(true);
-            setIsPaymentDialogOpen(false);
-            sessionStorage.removeItem('pendingResumeSubmission');
-          } catch (err) {
-            console.error('Error processing payment success:', err);
-            setIsUploaded(true);
-            setIsPaymentDialogOpen(false);
-          }
-        };
-        
-        processPaymentSuccess();
-      } else {
-        // Payment succeeded but no file data found
-        setIsUploaded(true);
-        setIsPaymentDialogOpen(false);
-      }
-      
+      // The resume (if upload succeeded) was already stored and Kasey
+      // notified before the Stripe redirect; here we only decide which
+      // confirmation message to show.
+      const pending = readPendingSubmission();
+      setResumeReceived(Boolean(pending?.uploaded));
+      setPaymentComplete(true);
+      setIsPaymentDialogOpen(false);
+      clearPendingSubmission();
       // Clear URL params
       window.history.replaceState({}, '', '/career-support');
     }
-    
+
     if (paymentStatus === 'canceled') {
       setIsPaymentDialogOpen(false);
-      sessionStorage.removeItem('pendingResumeSubmission');
+      clearPendingSubmission();
       // Clear URL params
       window.history.replaceState({}, '', '/career-support');
     }
@@ -201,18 +190,6 @@ const CareerSupport = () => {
       return;
     }
     setIsPaymentDialogOpen(true);
-  };
-
-  const handlePaymentSuccess = async () => {
-    // In production, upload the file to your backend after payment confirmation
-    // For now, we'll simulate a successful upload
-    if (selectedFile) {
-      // TODO: Upload file to backend/storage service
-      // await uploadResume(selectedFile);
-      setIsUploaded(true);
-      setIsPaymentDialogOpen(false);
-      setSelectedFile(null);
-    }
   };
 
   const handlePaymentCancel = () => {
@@ -271,27 +248,59 @@ const CareerSupport = () => {
               </Card>
             </div>
 
-            {isUploaded ? (
-              <Card className="border-green-500 bg-green-50/50 dark:bg-green-950/20">
-                <CardHeader>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle2 className="h-6 w-6 text-green-500" />
-                    <CardTitle className="text-green-700 dark:text-green-400">Payment Successful!</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-lg font-medium text-portfolio-text">
-                    Thank you for your payment!
-                  </p>
-                  <p className="text-muted-foreground">
-                    Your resume has been received successfully. Kasey will reach out to you within 5 business days 
-                    with detailed feedback on your resume. You'll receive the review via email at the address you provided.
-                  </p>
-                  <p className="text-sm text-muted-foreground italic">
-                    We appreciate your trust in our career support services!
-                  </p>
-                </CardContent>
-              </Card>
+            {paymentComplete ? (
+              resumeReceived ? (
+                <Card className="border-green-500 bg-green-50/50 dark:bg-green-950/20">
+                  <CardHeader>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="h-6 w-6 text-green-500" />
+                      <CardTitle className="text-green-700 dark:text-green-400">Payment Successful!</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-lg font-medium text-portfolio-text">
+                      Thank you for your payment!
+                    </p>
+                    <p className="text-muted-foreground">
+                      Your resume has been received successfully. Kasey will reach out to you within 5 business days
+                      with detailed feedback on your resume. You'll receive the review via email at the address you provided.
+                    </p>
+                    <p className="text-sm text-muted-foreground italic">
+                      We appreciate your trust in our career support services!
+                    </p>
+                  </CardContent>
+                </Card>
+              ) : (
+                <Card className="border-amber-500 bg-amber-50/50 dark:bg-amber-950/20">
+                  <CardHeader>
+                    <div className="flex items-center gap-2">
+                      <AlertTriangle className="h-6 w-6 text-amber-500" />
+                      <CardTitle className="text-amber-700 dark:text-amber-400">
+                        Payment successful — one more step
+                      </CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-lg font-medium text-portfolio-text">
+                      Thank you for your payment!
+                    </p>
+                    <p className="text-muted-foreground">
+                      However, we didn't receive your resume file. To get your review started, please
+                      email your resume (PDF) to{' '}
+                      <a
+                        href="mailto:kaseykungfu@gmail.com?subject=Resume%20review%20submission"
+                        className="font-medium text-portfolio-accent underline"
+                      >
+                        kaseykungfu@gmail.com
+                      </a>{' '}
+                      from the same email address you used at checkout, so Kasey can match it to your payment.
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Once your resume arrives, you'll receive detailed feedback within 5 business days.
+                    </p>
+                  </CardContent>
+                </Card>
+              )
             ) : (
               <Card>
                 <CardHeader>
@@ -354,7 +363,6 @@ const CareerSupport = () => {
                         <PaymentForm
                           file={selectedFile}
                           email={userEmail}
-                          onSuccess={handlePaymentSuccess}
                           onCancel={handlePaymentCancel}
                         />
                       )}
